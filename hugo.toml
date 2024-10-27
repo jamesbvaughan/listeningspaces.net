@@ -1,6 +1,7 @@
 languageCode = 'en-us'
 baseURL = '/'
 title = "Listening Spaces"
-enableGitInfo = false
+enableGitInfo = true
 buildDrafts = false
+enableRobotsTXT = true
 disableKinds = ["taxonomy", "term", "section", "page", "RSS"]
