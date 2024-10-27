@@ -1,0 +1,54 @@
+- name: North America
+  countries:
+    - name: United States of America
+      states:
+        - name: California
+          cities:
+            - name: Oakland
+              spaces:
+                - name: Bar Shiru
+                  url: https://www.barshiru.com/
+                  map: https://maps.app.goo.gl/RFgNRBLiWe9WfBoC9
+
+            - name: San Francisco
+              spaces:
+                - name: Yokai
+                  url: https://yokaisf.com/
+                  map: https://maps.app.goo.gl/fqRNL3YtZSXCtmvK7
+
+- name: Europe
+  countries:
+    - name: Ireland
+      cities:
+        - name: Dublin
+          spaces:
+            - name: Fidelity
+              url: https://www.fidelitybar.ie
+              map: https://maps.app.goo.gl/2bKzHJL1aNRfnnnt9
+
+    - name: Spain
+      cities:
+        - name: Barcelona
+          spaces:
+            - name: Lonely Bar Hi-Fi
+              url: https://www.thelonelybar.com/
+              map: https://maps.app.goo.gl/gu96JGsmMymPrZr69
+
+            - name: Oblicuo Hi-Fi Bar
+              url: http://www.oblicuohifibar.com/
+              map: https://maps.app.goo.gl/P2AGTRXRFM2cqKHC6
+
+            - name: Curtis Audiophile Cafe
+              url: https://curtisaudiocafe.com/
+              map: https://maps.app.goo.gl/JQXgSWiCiB5s6mjYA
+
+    - name: Germany
+      cities:
+        - name: Berlin
+          spaces:
+            - name: Dussmann Bookshop
+              url: https://www.kulturkaufhaus.de/en/start
+              map: https://maps.app.goo.gl/AmMoapxtgcxh2imm9
+            - name: Rhinoçéros
+              url: https://rhinoceros-berlin.com/
+              map: https://maps.app.goo.gl/AE3LHgfjgoLucgYv8
