@@ -1,127 +1,64 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A directory of hi-fi listening spaces" />
-    <link rel="icon" href="/favicon.png" />
+{{ define "main" }}
+<div class="space-y-4">
+  <div class="text-6xl">Spaces</div>
 
-    <title>Listening Spaces</title>
+  <ul class="space-y-8">
+    {{ range .Site.Data.spaces }}
+    <li class="space-y-2">
+      <div class="text-xl uppercase font-semibold text-gray-500">
+        {{ .name }}
+      </div>
 
-    <style>
-      {{ readFile "assets/output.css" | safeCSS }}
-      #record {
-        transform-origin: 3800px 1770px;
-        animation: spin 1.8s linear infinite;
-      }
-      @keyframes spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
-  </head>
+      <ul class="space-y-6">
+        {{ range sort .countries "name" }}
+        <li class="space-y-2">
+          <div class="text-4xl">{{ .name }}</div>
 
-  <body class="mb-8 mt-4 mx-4">
-    <div class="container max-w-[720px] mx-auto space-y-8">
-      <header>
-        <div class="sm:hidden text-4xl text-center my-4">LISTENING SPACES</div>
-
-        <div class="flex justify-between items-center">
-          <div class="flex items-center space-x-4">
-            <div class="w-24 sm:w-28">
-              {{ readFile "assets/speaker.svg" | safeHTML }}
-            </div>
-            <div class="hidden sm:block text-6xl leading-none">
-              LISTENING<br />SPACES
-            </div>
-          </div>
-
-          <div class="w-24 sm:w-36">
-            {{ readFile "assets/turntable.svg" | safeHTML }}
-          </div>
-
-          <div class="w-24 sm:w-28 scale-x-[-1] shrink-0">
-            {{ readFile "assets/speaker.svg" | safeHTML }}
-          </div>
-        </div>
-      </header>
-
-      <main>
-        <div class="space-y-4">
-          <div class="text-6xl">Spaces</div>
-
-          <ul class="space-y-8">
-            {{ range .Site.Data.spaces }}
-            <li class="space-y-2">
-              <div class="text-xl uppercase font-semibold text-gray-500">
-                {{ .name }}
-              </div>
-
-              <ul class="space-y-6">
-                {{ range sort .countries "name" }}
-                <li class="space-y-2">
-                  <div class="text-4xl">{{ .name }}</div>
-
-                  <!-- For the US, include the state level -->
-                  {{ if eq .name "United States of America" }}
-                  <ul class="space-y-4">
-                    {{ range sort .states "name" }}
-                    <li class="space-y-1">
-                      <div class="text-3xl">{{ .name }}</div>
-                      {{ partial "city-list.html" . }}
-                    </li>
-                    {{ end }}
-                  </ul>
-                  {{ else }}
-                  <!-- For other countries, include cities directly -->
-                  {{ partial "city-list.html" . }} {{ end }}
-                </li>
-                {{ end }}
-              </ul>
+          <!-- For the US, include the state level -->
+          {{ if eq .name "United States of America" }}
+          <ul class="space-y-4">
+            {{ range sort .states "name" }}
+            <li class="space-y-1">
+              <div class="text-3xl">{{ .name }}</div>
+              {{ partial "city-list.html" . }}
             </li>
             {{ end }}
           </ul>
-        </div>
+          {{ else }}
+          <!-- For other countries, include cities directly -->
+          {{ partial "city-list.html" . }} {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </li>
+    {{ end }}
+  </ul>
+</div>
 
-        <hr class="border-black my-8" />
+<hr class="border-black my-8" />
 
-        <div class="space-y-4 text-2xl">
-          <div class="text-6xl">About</div>
+<div class="space-y-4 text-2xl">
+  <div class="text-6xl">About</div>
 
-          <p>
-            This is a direcory of spaces where you can listen to high fidelity
-            soundsystems.
-          </p>
+  <p>
+    This is a direcory of spaces where you can listen to high fidelity
+    soundsystems.
+  </p>
 
-          <p>
-            I built this because I want more of these listening spaces to exist.
-            I hope that this directory raises interest in these spaces,
-            increases demand for them, and ultimately leads to more of them
-            opening.
-          </p>
+  <p>
+    I built this because I want more of these listening spaces to exist. I hope
+    that this directory raises interest in these spaces, increases demand for
+    them, and ultimately leads to more of them opening.
+  </p>
 
-          <p>
-            So far, I've only added places that I've visited or want to visit.
-            If you'd like to contribute, please
-            <a href="mailto:james@jamesbvaughan.com">email me</a>, or send me a
-            PR if you're comfortable with GitHub.
-            <a href="https://github.com/jamesbvaughan/listening-spaces"
-              >Here's the repo</a
-            >.
-          </p>
-        </div>
-      </main>
-
-      <hr class="border-black my-8" />
-
-      <footer class="text-xl">
-        Made by
-        <a href="https://jamesbvaughan.com">James Vaughan</a>
-      </footer>
-    </div>
-  </body>
-</html>
+  <p>
+    So far, I've only added places that I've visited or want to visit. If you'd
+    like to contribute, please
+    <a href="mailto:james@jamesbvaughan.com">email me</a>, or send me a PR if
+    you're comfortable with GitHub.
+    <a href="https://github.com/jamesbvaughan/listening-spaces"
+      >Here's the repo</a
+    >.
+  </p>
+</div>
+{{ end }}

@@ -1,0 +1,13 @@
+{{ define "title" }}404 | {{ .Site.Title }}{{ end }} {{ define "main" }}
+<div class="space-y-4">
+  <h1 class="text-6xl">404 Not Found</h1>
+
+  <div class="text-2xl space-y-2">
+    <p>There's nothing here!</p>
+    <p>
+      Everything on this site is
+      <a href="{{ .Site.Home.RelPermalink }}">here on the home page</a>.
+    </p>
+  </div>
+</div>
+{{ end }}
