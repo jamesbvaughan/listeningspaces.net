@@ -6,7 +6,7 @@
     <ul>
       {{ range sort .spaces "name" }}
       <li class="text-xl flex items-center space-x-2">
-        <a href="{{ .url }}">{{ .name }}</a>
+        <a href="{{ .url }}">{{ .name }} {{ .emoji }}</a>
         <a
           href="{{ .map }}"
           class="w-6 opacity-50 hover:opacity-100"

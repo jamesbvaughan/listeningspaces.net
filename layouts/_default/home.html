@@ -1,41 +1,45 @@
 {{ define "main" }}
-<div class="space-y-4">
-  <div class="text-6xl">Spaces</div>
+<div>
+  <div class="space-y-4">
+    <div class="text-6xl">Spaces</div>
 
-  <ul class="space-y-8">
-    {{ range .Site.Data.spaces }}
-    <li class="space-y-2">
-      <div class="text-xl uppercase font-semibold text-gray-500">
-        {{ .name }}
-      </div>
+    <ul class="space-y-8">
+      {{ range .Site.Data.spaces }}
+      <li class="space-y-2">
+        <div class="text-xl uppercase font-semibold text-gray-500">
+          {{ .name }}
+        </div>
 
-      <ul class="space-y-6">
-        {{ range sort .countries "name" }}
-        <li class="space-y-2">
-          <div class="text-4xl">{{ .name }}</div>
+        <ul class="space-y-6">
+          {{ range sort .countries "name" }}
+          <li class="space-y-2">
+            <div class="text-4xl flex items-center space-x-2">
+              <div>{{ .name }}</div>
+            </div>
 
-          <!-- For the US, include the state level -->
-          {{ if eq .name "United States of America" }}
-          <ul class="space-y-4">
-            {{ range sort .states "name" }}
-            <li class="space-y-1">
-              <div class="text-3xl">{{ .name }}</div>
-              {{ partial "city-list.html" . }}
-            </li>
-            {{ end }}
-          </ul>
-          {{ else }}
-          <!-- For other countries, include cities directly -->
-          {{ partial "city-list.html" . }} {{ end }}
-        </li>
-        {{ end }}
-      </ul>
-    </li>
-    {{ end }}
-  </ul>
+            <!-- For the US, include the state level -->
+            {{ if eq .name "United States of America" }}
+            <ul class="space-y-4">
+              {{ range sort .states "name" }}
+              <li class="space-y-1">
+                <div class="text-3xl">{{ .name }}</div>
+                {{ partial "city-list.html" . }}
+              </li>
+              {{ end }}
+            </ul>
+            {{ else }}
+            <!-- For other countries, include cities directly -->
+            {{ partial "city-list.html" . }} {{ end }}
+          </li>
+          {{ end }}
+        </ul>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
 </div>
 
-<hr class="border-black my-8" />
+<hr class="my-8" />
 
 <div class="space-y-4 text-2xl">
   <div class="text-6xl">About</div>

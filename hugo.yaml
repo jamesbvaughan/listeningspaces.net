@@ -1,0 +1,18 @@
+title: Listening Spaces
+baseURL: https://listeningspaces.net
+languageCode: en-us
+
+enableGitInfo: true
+buildDrafts: false
+disableKinds:
+  - taxonomy
+  - term
+  - section
+  - page
+  - RSS
+
+enableRobotsTXT: true
+
+build:
+  buildStats:
+    enable: true

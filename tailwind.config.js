@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["layouts/**/*.html", "assets/**/*.svg", "content/**/*.md"],
+  content: ["hugo_stats.json", "assets/*.svg"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        "spin-33rpm": "spin 1.8s linear infinite",
+      },
+    },
   },
   plugins: [],
 };
