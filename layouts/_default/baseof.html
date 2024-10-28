@@ -12,8 +12,8 @@
     <meta property="og:url" content="{{ .Permalink }}" />
 
     {{ with resources.Get "images/og.png" | resources.Fingerprint }}
-      <meta property="og:image" content="{{ .RelPermalink }}" />
-      <meta name="twitter:image" content="{{ .RelPermalink }}" />
+      <meta property="og:image" content="{{ .Permalink }}" />
+      <meta name="twitter:image" content="{{ .Permalink }}" />
     {{ end }}
 
 
