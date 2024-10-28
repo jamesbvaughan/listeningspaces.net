@@ -1,25 +1,25 @@
 {{ define "main" }}
   <div>
-    <div class="space-y-4">
+    <div class="space-y-8">
       <h2 class="text-6xl">Spaces</h2>
 
-      <div class="space-y-8">
+      <div class="space-y-14">
         {{ range .Site.Data.spaces }}
           <div class="space-y-2">
             <h3 class="text-xl uppercase font-semibold text-gray-500">
               {{ .name }}
             </h3>
 
-            <div class="space-y-6">
-              {{ range sort .countries "name" }}
-                <div class="space-y-2">
+            <div class="space-y-10">
+              {{ range .countries }}
+                <div class="space-y-4">
                   <h4 class="text-4xl flex items-center space-x-2">
                     {{ .name }}
                   </h4>
 
                   <!-- For the US, include the state level -->
                   {{ if eq .name "United States of America" }}
-                    <div class="space-y-4">
+                    <div class="space-y-8">
                       {{ range sort .states "name" }}
                         <div class="space-y-2">
                           <h5 class="text-3xl">{{ .name }}</h5>
