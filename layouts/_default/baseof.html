@@ -21,7 +21,10 @@
     <meta name="twitter:title" content="{{ .Site.Title }}" />
     <meta name="twitter:site" content="@jamesontheline" />
 
-    <link rel="icon" href="/favicon.png" />
+    {{ with resources.Get "images/favicon.png" }}
+      <link rel="icon" href="{{ .Permalink }}" />
+    {{ end }}
+
 
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
@@ -32,7 +35,9 @@
 
   <body
     class="mb-8 mt-4 mx-4 overflow-y-scroll"
-    style="background-image: url(/natural-paper.png)"
+    {{ with resources.Get "images/natural-paper.png" }}
+      style="background-image: url({{ .RelPermalink }})"
+    {{ end }}
   >
     <div
       class="container text-black/70 mix-blend-multiply max-w-[720px] mx-auto space-y-8"
