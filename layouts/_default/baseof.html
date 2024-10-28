@@ -1,13 +1,21 @@
+{{ $description := "A directory of hi-fi listening spaces. Find listening rooms, hi-fi bars, and jazz cafes all over the world." }}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A directory of hi-fi listening spaces. Find listening rooms, hi-fi bars, and jazz cafes all over the world."
-    />
+    <meta name="description" content="{{ $description }}" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ .Site.Title }}" />
+    <meta property="og:description" content="{{ $description }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:image" content="/og.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ .Site.Title }}" />
+    <meta name="twitter:site" content="@jamesontheline" />
+    <meta name="twitter:image" content="/og.png" />
 
     <link rel="icon" href="/favicon.png" />
 
