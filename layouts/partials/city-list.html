@@ -1,26 +1,26 @@
 <div class="flex flex-wrap gap-8">
   {{ range sort .cities "name" }}
-  <div class="space-y-1">
-    <h6 class="text-2xl text-nowrap">{{ .name }}</h6>
+    <div class="space-y-1">
+      <h6 class="text-2xl text-nowrap">{{ .name }}</h6>
 
-    <ul>
-      {{ range sort .spaces "name" }}
-      <li
-        class="text-xl flex group font-light text-nowrap items-center space-x-2"
-      >
-        <a href="{{ .url }}">{{ .name }}</a>
-        <a
-          href="{{ .map }}"
-          class="w-6 opacity-50 hover:opacity-100"
-          aria-label="Google Maps link for {{ .name }}"
-        >
-          {{ with resources.Get "images/map.svg" | resources.Fingerprint }}
-          <img src="{{ .RelPermalink }}" />
-          {{ end }}
-        </a>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
+      <ul>
+        {{ range sort .spaces "name" }}
+          <li
+            class="text-xl flex group font-light text-nowrap items-center space-x-2"
+          >
+            <a href="{{ .url }}">{{ .name }}</a>
+            <a
+              href="{{ .map }}"
+              class="w-6 opacity-50 hover:opacity-100"
+              aria-label="Google Maps link for {{ .name }}"
+            >
+              {{ with resources.Get "images/map.svg" | resources.Fingerprint }}
+                <img src="{{ .RelPermalink }}" />
+              {{ end }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
   {{ end }}
 </div>

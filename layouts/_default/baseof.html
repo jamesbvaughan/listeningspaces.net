@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A directory of hi-fi listening spaces" />
-    <meta http-equiv="last-modified" content="{{ .Lastmod.Format "2006-01-02" }}">
+    <meta
+      http-equiv="last-modified"
+      content="{{ .Lastmod.Format "2006-01-02" }}"
+    />
     <meta property="og:image" content="/og.png" />
 
     <link rel="icon" href="/favicon.png" />
@@ -16,8 +19,14 @@
     {{ end }}
   </head>
 
-  <body class="mb-8 mt-4 mx-4" style="background-image: url(/natural-paper.png)">
-    <div class="container text-black/70 mix-blend-multiply max-w-[720px] mx-auto space-y-8" style="filter: url(#paper-ink)">
+  <body
+    class="mb-8 mt-4 mx-4"
+    style="background-image: url(/natural-paper.png)"
+  >
+    <div
+      class="container text-black/70 mix-blend-multiply max-w-[720px] mx-auto space-y-8"
+      style="filter: url(#paper-ink)"
+    >
       <header>
         <h1 class="sm:hidden text-4xl uppercase text-center my-4">
           Listening Spaces
@@ -26,8 +35,12 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center space-x-4">
             {{ with resources.Get "images/speaker.svg" | resources.Fingerprint }}
-            <img src="{{ .RelPermalink }}" class="h-10 w-10 sm:h-[120px] sm:w-24">
+              <img
+                src="{{ .RelPermalink }}"
+                class="h-10 w-10 sm:h-[120px] sm:w-24"
+              />
             {{ end }}
+
 
             <h1 class="hidden sm:block text-6xl leading-none uppercase">
               Listening<br />Spaces
@@ -35,11 +48,14 @@
           </div>
 
           {{ with resources.Get "images/turntable.svg" | resources.Fingerprint }}
-          <img src="{{ .RelPermalink }}" class="w-10 h-10 sm:w-44 sm:h-28">
+            <img src="{{ .RelPermalink }}" class="w-10 h-10 sm:w-44 sm:h-28" />
           {{ end }}
 
           {{ with resources.Get "images/speaker.svg" | resources.Fingerprint }}
-          <img src="{{ .RelPermalink }}" class="scale-x-[-1] h-10 w-10 sm:h-[120px] sm:w-24">
+            <img
+              src="{{ .RelPermalink }}"
+              class="scale-x-[-1] h-10 w-10 sm:h-[120px] sm:w-24"
+            />
           {{ end }}
         </div>
       </header>
@@ -60,8 +76,8 @@
 
     <svg hidden>
       <filter id="paper-ink">
-        <feMorphology operator="dilate" radius="0.4"/>
-        <feGaussianBlur stdDeviation="0.3"/>
+        <feMorphology operator="dilate" radius="0.4" />
+        <feGaussianBlur stdDeviation="0.3" />
       </filter>
     </svg>
   </body>

@@ -1,66 +1,69 @@
 {{ define "main" }}
-<div>
-  <div class="space-y-4">
-    <h2 class="text-6xl">Spaces</h2>
+  <div>
+    <div class="space-y-4">
+      <h2 class="text-6xl">Spaces</h2>
 
-    <div class="space-y-8">
-      {{ range .Site.Data.spaces }}
-      <div class="space-y-2">
-        <h3 class="text-xl uppercase font-semibold text-gray-500">
-          {{ .name }}
-        </h3>
-
-        <div class="space-y-6">
-          {{ range sort .countries "name" }}
+      <div class="space-y-8">
+        {{ range .Site.Data.spaces }}
           <div class="space-y-2">
-            <h4 class="text-4xl flex items-center space-x-2">{{ .name }}</h4>
+            <h3 class="text-xl uppercase font-semibold text-gray-500">
+              {{ .name }}
+            </h3>
 
-            <!-- For the US, include the state level -->
-            {{ if eq .name "United States of America" }}
-            <div class="space-y-4">
-              {{ range sort .states "name" }}
-              <div class="space-y-2">
-                <h5 class="text-3xl">{{ .name }}</h5>
-                {{ partial "city-list.html" . }}
-              </div>
+            <div class="space-y-6">
+              {{ range sort .countries "name" }}
+                <div class="space-y-2">
+                  <h4 class="text-4xl flex items-center space-x-2">
+                    {{ .name }}
+                  </h4>
+
+                  <!-- For the US, include the state level -->
+                  {{ if eq .name "United States of America" }}
+                    <div class="space-y-4">
+                      {{ range sort .states "name" }}
+                        <div class="space-y-2">
+                          <h5 class="text-3xl">{{ .name }}</h5>
+                          {{ partial "city-list.html" . }}
+                        </div>
+                      {{ end }}
+                    </div>
+                  {{ else }}
+                    <!-- For other countries, include cities directly -->
+                    {{ partial "city-list.html" . }}
+                  {{ end }}
+                </div>
               {{ end }}
             </div>
-            {{ else }}
-            <!-- For other countries, include cities directly -->
-            {{ partial "city-list.html" . }} {{ end }}
           </div>
-          {{ end }}
-        </div>
+        {{ end }}
       </div>
-      {{ end }}
     </div>
   </div>
-</div>
 
-<hr class="my-8" />
+  <hr class="my-8" />
 
-<div class="space-y-4 text-2xl">
-  <h2 class="text-6xl">About</h2>
+  <div class="space-y-4 text-2xl">
+    <h2 class="text-6xl">About</h2>
 
-  <p>
-    This is a direcory of spaces where you can listen to high fidelity
-    soundsystems.
-  </p>
+    <p>
+      This is a direcory of spaces where you can listen to high fidelity
+      soundsystems.
+    </p>
 
-  <p>
-    I built this because I want more of these listening spaces to exist. I hope
-    that this directory raises interest in these spaces, increases demand for
-    them, and ultimately leads to more of them opening.
-  </p>
+    <p>
+      I built this because I want more of these listening spaces to exist. I
+      hope that this directory raises interest in these spaces, increases demand
+      for them, and ultimately leads to more of them opening.
+    </p>
 
-  <p>
-    So far, I've only added places that I've visited or want to visit. If you'd
-    like to contribute, please
-    <a href="mailto:james@jamesbvaughan.com">email me</a>, or send me a PR if
-    you're comfortable with GitHub.
-    <a href="https://github.com/jamesbvaughan/listening-spaces"
-      >Here's the repo</a
-    >.
-  </p>
-</div>
+    <p>
+      So far, I've only added places that I've visited or want to visit. If
+      you'd like to contribute, please
+      <a href="mailto:james@jamesbvaughan.com">email me</a>, or send me a PR if
+      you're comfortable with GitHub.
+      <a href="https://github.com/jamesbvaughan/listening-spaces"
+        >Here's the repo</a
+      >.
+    </p>
+  </div>
 {{ end }}
