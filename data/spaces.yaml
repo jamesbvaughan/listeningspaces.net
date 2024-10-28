@@ -28,6 +28,30 @@
                   url: http://parttimeloverhifi.com/
                   map: https://maps.app.goo.gl/fGz36USovMofYENS8
 
+        - name: Florida
+          cities:
+            - name: Miami
+              spaces:
+                - name: Dante's HiFi
+                  url: http://danteshifi.com/
+                  map: https://maps.app.goo.gl/v6yGm5wRmWZuYcbi7
+
+        - name: New York
+          cities:
+            - name: New York City
+              spaces:
+                - name: Public Records
+                  url: http://publicrecords.nyc/
+                  map: https://maps.app.goo.gl/aNVtH8kJboqLoj177
+
+        - name: Washington
+          cities:
+            - name: Seattile
+              spaces:
+                - name: Shibuya
+                  url: https://www.shibuyahifi.com/schedule-hifi
+                  map: https://maps.app.goo.gl/dxoZzQfLPWUJRrv79
+
     - name: Canada
       cities:
         - name: Toronto
@@ -35,6 +59,14 @@
             - name: The Little Jerry
               url: http://www.thelittlejerry.com/
               map: https://maps.app.goo.gl/tzJxKrKEKpThpfaD8
+
+    - name: Mexico
+      cities:
+        - name: Mexico City
+          spaces:
+            - name: Tokyo Music Bar
+              url: https://edokobayashi.com/
+              map: https://maps.app.goo.gl/ob2L4ngwWKKuZ9bA9
 
 - name: Europe
   countries:
@@ -53,6 +85,10 @@
             - name: Brilliant Corners
               url: http://brilliantcornerslondon.co.uk/
               map: https://maps.app.goo.gl/myrNQGg6VvkKeWkt8
+
+            - name: Spiritland
+              url: https://spiritland.com/
+              map: https://maps.app.goo.gl/FKVbbbHP7tS8JKt39
 
     - name: Spain
       cities:
