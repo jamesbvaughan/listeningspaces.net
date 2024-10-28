@@ -65,7 +65,7 @@
         - name: Mexico City
           spaces:
             - name: Tokyo Music Bar
-              url: https://edokobayashi.com/
+              url: https://edokobayashi.com/index.php/tokyo-music-bar/
               map: https://maps.app.goo.gl/ob2L4ngwWKKuZ9bA9
 
 - name: Europe
