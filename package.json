@@ -1,8 +1,8 @@
 {
-  "name": "listening-spaces",
+  "name": "listeningspaces.net",
   "version": "1.0.0",
   "description": "a directory of hi-fi listening spaces",
-  "repository": "https://github.com/jamesbvaughan/listening-spaces",
+  "repository": "https://github.com/jamesbvaughan/listeningspaces.net",
   "author": "James Vaughan <james@jamesbvaughan.com>",
   "license": "MIT",
   "private": true,
