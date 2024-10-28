@@ -11,7 +11,7 @@
     <meta property="og:description" content="{{ $description }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
 
-    {{ with resources.Get "images/og.png" | resources.Fingerprint }}
+    {{ with resources.Get "images/og.png" | fingerprint }}
       <meta property="og:image" content="{{ .Permalink }}" />
       <meta name="twitter:image" content="{{ .Permalink }}" />
     {{ end }}
@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="{{ .Site.Title }}" />
     <meta name="twitter:site" content="@jamesontheline" />
 
-    {{ with resources.Get "images/favicon.png" }}
+    {{ with resources.Get "images/favicon.png" | fingerprint }}
       <link rel="icon" href="{{ .Permalink }}" />
     {{ end }}
 
@@ -35,7 +35,7 @@
 
   <body
     class="mb-8 mt-4 mx-4 overflow-y-scroll"
-    {{ with resources.Get "images/natural-paper.png" }}
+    {{ with resources.Get "images/natural-paper.png" | fingerprint }}
       style="background-image: url({{ .RelPermalink }})"
     {{ end }}
   >
