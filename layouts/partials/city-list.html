@@ -8,10 +8,16 @@
           <li
             class="text-xl flex group font-light text-nowrap items-center space-x-2"
           >
-            <a
-              href="{{ .url }}?utm_source=listeningspaces.net&utm_medium=referral"
-              >{{ .name }}</a
-            >
+            {{ if .url }}
+              <a
+                href="{{ .url }}?utm_source=listeningspaces.net&utm_medium=referral"
+                >{{ .name }}</a
+              >
+            {{ else }}
+              <div>
+                {{ .name }}
+              </div>
+            {{ end }}
             <a
               href="{{ .map }}"
               class="w-6 opacity-50 hover:opacity-70"

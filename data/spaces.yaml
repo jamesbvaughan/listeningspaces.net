@@ -36,6 +36,34 @@
                   url: http://danteshifi.com/
                   map: https://maps.app.goo.gl/v6yGm5wRmWZuYcbi7
 
+                - name: Jolene Sound Room
+                  url: https://v4-jolenesoundroom.getbento.com/Miami/
+                  map: https://maps.app.goo.gl/pj5WDQPRZfWBBLjT7
+
+        - name: Arizona
+          cities:
+            - name: Phoenix
+              spaces:
+                - name: Central Records
+                  url: https://centralrecords824.com/
+                  map: https://maps.app.goo.gl/Y3MTq1iLg9ycVtucA
+
+        - name: Kansas
+          cities:
+            - name: Kansas City
+              spaces:
+                - name: The Listyning Room
+                  url: https://www.centerforrecordedmusic.org/listyningroom
+                  map: https://maps.app.goo.gl/bKNfyo1cm3y8rNmK9
+
+        - name: Texas
+          cities:
+            - name: Austin
+              spaces:
+                - name: Equipment Room
+                  url: https://equipmentroom.com/
+                  map: https://maps.app.goo.gl/qKmyoWW2rVmz4SzRA
+
         - name: New York
           cities:
             - name: New York City
@@ -43,6 +71,34 @@
                 - name: Public Records
                   url: http://publicrecords.nyc/
                   map: https://maps.app.goo.gl/aNVtH8kJboqLoj177
+
+                - name: Jolene Sound Room
+                  url: https://v4-jolenesoundroom.getbento.com/Brooklyn/
+                  map: https://maps.app.goo.gl/wkpaMxe52BY1QEkv7
+
+                - name: Tokyo Record Bar
+                  url: https://tokyorecordbar.com/
+                  map: https://maps.app.goo.gl/viQoHEi2fCtRNb7i9
+
+                - name: Eavesdrop
+                  url: https://www.eavesdrop.nyc/
+                  map: https://maps.app.goo.gl/bUNTfMUEe8KQJW2T9
+
+                - name: Honeycomb Hi-Fi Lounge
+                  url: https://honeycombk.com/
+                  map: https://maps.app.goo.gl/YYsbBazXsLnF4zmL8
+
+                - name: The Last Call
+                  url: https://www.thelastcallbk.com/
+                  map: https://maps.app.goo.gl/HXLQjp5K6yEJy9B88
+
+                - name: Café Kitsuné
+                  url: https://maisonkitsune.com/mk/us/the-bar-at-cafe-kitsune/
+                  map: https://maps.app.goo.gl/1SrLJbt4dCf3DjiaA
+
+                - name: OJAS Listening Room at USM
+                  url: https://us.usm.com/blogs/journal-home/devon-turnbull-ojas-listening-room
+                  map: https://maps.app.goo.gl/JSuQrbe2uMSD7yJeA
 
         - name: Washington
           cities:
@@ -52,6 +108,14 @@
                   url: https://www.shibuyahifi.com/schedule-hifi
                   map: https://maps.app.goo.gl/dxoZzQfLPWUJRrv79
 
+        - name: Colorado
+          cities:
+            - name: Denver
+              spaces:
+                - name: ESP
+                  url: https://esphifi.co/
+                  map: https://maps.app.goo.gl/KT7VqMBwxSwZ2CXM7
+
     - name: Canada
       cities:
         - name: Toronto
@@ -59,6 +123,14 @@
             - name: The Little Jerry
               url: http://www.thelittlejerry.com/
               map: https://maps.app.goo.gl/tzJxKrKEKpThpfaD8
+
+            - name: Rooms Coffee | 915 Dupont
+              url: https://www.instagram.com/915dupont
+              map: https://maps.app.goo.gl/hTZzPzy7H11VSRKr6
+
+            - name: Rooms Coffee | 17 Baldwin
+              url: https://www.instagram.com/17baldwinst/
+              map: https://maps.app.goo.gl/6odnn27CfSckHtcSA
 
     - name: Mexico
       cities:
@@ -90,6 +162,14 @@
               url: https://spiritland.com/
               map: https://maps.app.goo.gl/FKVbbbHP7tS8JKt39
 
+    - name: France
+      cities:
+        - name: Paris
+          spaces:
+            - name: Fréquence
+              url: https://www.instagram.com/frequenceparis/
+              map: https://maps.app.goo.gl/1vFUQ2zW7Wx99tjH7
+
     - name: Spain
       cities:
         - name: Barcelona
@@ -106,6 +186,12 @@
               url: https://curtisaudiocafe.com/
               map: https://maps.app.goo.gl/JQXgSWiCiB5s6mjYA
 
+        - name: Madrid
+          spaces:
+            - name: Tempo Club
+              url: https://www.tempoclub.es/
+              map: https://maps.app.goo.gl/PpVMNPptPQjRCLLKA
+
     - name: Germany
       cities:
         - name: Berlin
@@ -117,6 +203,48 @@
             - name: Rhinoçéros
               url: https://rhinoceros-berlin.com/
               map: https://maps.app.goo.gl/AE3LHgfjgoLucgYv8
+
+            - name: Unkompress
+              url: https://www.instagram.com/unkompress/
+              map: https://maps.app.goo.gl/ZfvbmpdVBJLtR2HS8
+
+            - name: Bar Neiro
+              url: https://barneiro.com/
+              map: https://maps.app.goo.gl/XAvWw7SfJVx1YBq78
+
+- name: Asia
+  countries:
+    - name: Japan
+      cities:
+        - name: Tokyo
+          spaces:
+            - name: JBS
+              map: https://maps.app.goo.gl/HmvqExibvhrkEtKA7
+
+    - name: Thailand
+      cities:
+        - name: Bangkok
+          spaces:
+            - name: Clutch
+              url: https://www.instagram.com/clutchbkk
+              map: https://maps.app.goo.gl/bw1nSxtEVZgW2ADT6
+
+    - name: South Korea
+      cities:
+        - name: Gyeonggi-do
+          spaces:
+            - name: Camerata
+              map: https://maps.app.goo.gl/Zk5jn8nBcHCgAMY37
+
+- name: Australia
+  countries:
+    - name: Australia
+      cities:
+        - name: Brunswick
+          spaces:
+            - name: Waxflower
+              url: http://www.waxflowerbar.com.au/
+              map: https://maps.app.goo.gl/N3CLV4xeZY9SZU2D8
 
 - name: Middle East
   countries:
