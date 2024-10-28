@@ -10,12 +10,16 @@
     <meta property="og:title" content="{{ .Site.Title }}" />
     <meta property="og:description" content="{{ $description }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
-    <meta property="og:image" content="/og.png" />
+
+    {{ with resources.Get "images/og.png" | resources.Fingerprint }}
+      <meta property="og:image" content="{{ .RelPermalink }}" />
+      <meta name="twitter:image" content="{{ .RelPermalink }}" />
+    {{ end }}
+
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ .Site.Title }}" />
     <meta name="twitter:site" content="@jamesontheline" />
-    <meta name="twitter:image" content="/og.png" />
 
     <link rel="icon" href="/favicon.png" />
 
