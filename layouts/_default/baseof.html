@@ -36,7 +36,7 @@
             {{ with resources.Get "images/speaker.svg" | resources.Fingerprint }}
               <img
                 src="{{ .RelPermalink }}"
-                class="h-10 w-10 sm:h-[120px] sm:w-24"
+                class="h-28 w-28 sm:h-[120px] sm:w-24"
                 alt="Speaker"
               />
             {{ end }}
@@ -50,7 +50,7 @@
           {{ with resources.Get "images/turntable.svg" | resources.Fingerprint }}
             <img
               src="{{ .RelPermalink }}"
-              class="w-10 h-10 sm:w-44 sm:h-28"
+              class="w-24 h-24 sm:w-44 sm:h-28"
               alt="Turntable"
             />
           {{ end }}
@@ -58,7 +58,7 @@
           {{ with resources.Get "images/speaker.svg" | resources.Fingerprint }}
             <img
               src="{{ .RelPermalink }}"
-              class="scale-x-[-1] h-10 w-10 sm:h-[120px] sm:w-24"
+              class="scale-x-[-1] h-28 w-28 sm:h-[120px] sm:w-24"
               alt="Speaker"
             />
           {{ end }}
