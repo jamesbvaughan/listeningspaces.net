@@ -29,6 +29,7 @@
                     </div>
                   {{ else }}
                     <!-- For other countries, include cities directly -->
+                    <h5 class="sr-only">All of {{ .name }}</h5>
                     {{ partial "city-list.html" . }}
                   {{ end }}
                 </div>
