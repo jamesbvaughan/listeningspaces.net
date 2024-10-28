@@ -18,7 +18,7 @@
               aria-label="Google Maps link for {{ .name }}"
             >
               {{ with resources.Get "images/map.svg" | resources.Fingerprint }}
-                <img src="{{ .RelPermalink }}" />
+                <img src="{{ .RelPermalink }}" alt="Map" />
               {{ end }}
             </a>
           </li>
