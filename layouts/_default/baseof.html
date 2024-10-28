@@ -11,39 +11,36 @@
 
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
-    <style>
-    {{ with resources.Get "output.css" }}{{ .Content | safeCSS }}{{ end }}
-    </style>
+    {{ with resources.Get "css/output.css" }}
+    <style>{{ .Content | safeCSS }}</style>
+    {{ end }}
   </head>
 
   <body class="mb-8 mt-4 mx-4" style="background-image: url(/natural-paper.png)">
     <div class="container text-black/70 mix-blend-multiply max-w-[720px] mx-auto space-y-8" style="filter: url(#paper-ink)">
       <header>
-        <div class="sm:hidden text text-4xl text-center my-4">LISTENING SPACES</div>
+        <h1 class="sm:hidden text-4xl uppercase text-center my-4">
+          Listening Spaces
+        </h1>
 
         <div class="flex justify-between items-center">
           <div class="flex items-center space-x-4">
-            <div class="w-24 sm:w-28">
-              {{ with resources.Get "speaker.svg" }}
-              {{ .Content | safeHTML }}
-              {{ end }}
-            </div>
-            <div class="hidden sm:block text-6xl leading-none text">
-              LISTENING<br />SPACES
-            </div>
+            {{ with resources.Get "images/speaker.svg" | resources.Fingerprint }}
+            <img src="{{ .RelPermalink }}" class="h-10 w-10 sm:h-[120px] sm:w-24">
+            {{ end }}
+
+            <h1 class="hidden sm:block text-6xl leading-none uppercase">
+              Listening<br />Spaces
+            </h1>
           </div>
 
-          <div class="w-24 sm:w-36">
-            {{ with resources.Get "turntable.svg" }}
-            {{ .Content | safeHTML }}
-            {{ end }}
-          </div>
+          {{ with resources.Get "images/turntable.svg" | resources.Fingerprint }}
+          <img src="{{ .RelPermalink }}" class="w-10 h-10 sm:w-44 sm:h-28">
+          {{ end }}
 
-          <div class="w-24 sm:w-28 scale-x-[-1] shrink-0">
-            {{ with resources.Get "speaker.svg" }}
-            {{ .Content | safeHTML }}
-            {{ end }}
-          </div>
+          {{ with resources.Get "images/speaker.svg" | resources.Fingerprint }}
+          <img src="{{ .RelPermalink }}" class="scale-x-[-1] h-10 w-10 sm:h-[120px] sm:w-24">
+          {{ end }}
         </div>
       </header>
 
@@ -61,7 +58,7 @@
       </footer>
     </div>
 
-    <svg style="display: none;">
+    <svg hidden>
       <filter id="paper-ink">
         <feMorphology operator="dilate" radius="0.4"/>
         <feGaussianBlur stdDeviation="0.3"/>

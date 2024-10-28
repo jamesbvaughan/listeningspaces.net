@@ -16,6 +16,26 @@
                   url: https://yokaisf.com/
                   map: https://maps.app.goo.gl/fqRNL3YtZSXCtmvK7
 
+            - name: Los Angeles
+              spaces:
+                - name: Goldline
+                  url: https://www.goldlinebar.com/
+                  map: https://maps.app.goo.gl/n2LW9MYiSDC5qG636
+
+            - name: San Diego
+              spaces:
+                - name: Part Time Lover
+                  url: http://parttimeloverhifi.com/
+                  map: https://maps.app.goo.gl/fGz36USovMofYENS8
+
+    - name: Canada
+      cities:
+        - name: Toronto
+          spaces:
+            - name: The Little Jerry
+              url: http://www.thelittlejerry.com/
+              map: https://maps.app.goo.gl/tzJxKrKEKpThpfaD8
+
 - name: Europe
   countries:
     - name: Ireland
@@ -25,6 +45,14 @@
             - name: Fidelity
               url: https://www.fidelitybar.ie
               map: https://maps.app.goo.gl/2bKzHJL1aNRfnnnt9
+
+    - name: United Kingdom
+      cities:
+        - name: London
+          spaces:
+            - name: Brilliant Corners
+              url: http://brilliantcornerslondon.co.uk/
+              map: https://maps.app.goo.gl/myrNQGg6VvkKeWkt8
 
     - name: Spain
       cities:
@@ -52,3 +80,13 @@
             - name: Rhinoçéros
               url: https://rhinoceros-berlin.com/
               map: https://maps.app.goo.gl/AE3LHgfjgoLucgYv8
+
+- name: Middle East
+  countries:
+    - name: Israel
+      cities:
+        - name: Tel Aviv
+          spaces:
+            - name: Romano
+              url: https://ontopo.co.il/romano
+              map: https://maps.app.goo.gl/p897LCAvqhzdeF5X8

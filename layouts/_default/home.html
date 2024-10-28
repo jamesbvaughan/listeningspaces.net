@@ -1,48 +1,46 @@
 {{ define "main" }}
 <div>
   <div class="space-y-4">
-    <div class="text-6xl">Spaces</div>
+    <h2 class="text-6xl">Spaces</h2>
 
-    <ul class="space-y-8">
+    <div class="space-y-8">
       {{ range .Site.Data.spaces }}
-      <li class="space-y-2">
-        <div class="text-xl uppercase font-semibold text-gray-500">
+      <div class="space-y-2">
+        <h3 class="text-xl uppercase font-semibold text-gray-500">
           {{ .name }}
-        </div>
+        </h3>
 
-        <ul class="space-y-6">
+        <div class="space-y-6">
           {{ range sort .countries "name" }}
-          <li class="space-y-2">
-            <div class="text-4xl flex items-center space-x-2">
-              <div>{{ .name }}</div>
-            </div>
+          <div class="space-y-2">
+            <h4 class="text-4xl flex items-center space-x-2">{{ .name }}</h4>
 
             <!-- For the US, include the state level -->
             {{ if eq .name "United States of America" }}
-            <ul class="space-y-4">
+            <div class="space-y-4">
               {{ range sort .states "name" }}
-              <li class="space-y-1">
-                <div class="text-3xl">{{ .name }}</div>
+              <div class="space-y-2">
+                <h5 class="text-3xl">{{ .name }}</h5>
                 {{ partial "city-list.html" . }}
-              </li>
+              </div>
               {{ end }}
-            </ul>
+            </div>
             {{ else }}
             <!-- For other countries, include cities directly -->
             {{ partial "city-list.html" . }} {{ end }}
-          </li>
+          </div>
           {{ end }}
-        </ul>
-      </li>
+        </div>
+      </div>
       {{ end }}
-    </ul>
+    </div>
   </div>
 </div>
 
 <hr class="my-8" />
 
 <div class="space-y-4 text-2xl">
-  <div class="text-6xl">About</div>
+  <h2 class="text-6xl">About</h2>
 
   <p>
     This is a direcory of spaces where you can listen to high fidelity

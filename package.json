@@ -7,9 +7,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "tailwind": "tailwindcss -i assets/input.css -o assets/output.css",
+    "tailwind": "tailwindcss -i assets/css/input.css -o assets/css/output.css",
     "dev": "concurrently -n tailwind,hugo 'yarn tailwind --watch' 'hugo server'",
-    "build": "yarn tailwind && hugo"
+    "build": "yarn tailwind --minify && hugo --minify"
   },
   "devDependencies": {
     "concurrently": "^9.0.1",
