@@ -28,6 +28,10 @@
       <link rel="icon" href="{{ .Permalink }}" />
     {{ end }}
 
+    {{ if .Site.IsServer }}
+      <script src="https://cdn.tailwindcss.com"></script>
+    {{ end }}
+
 
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
