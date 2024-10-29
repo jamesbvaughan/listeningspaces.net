@@ -162,6 +162,14 @@
               url: https://spiritland.com/
               map: https://maps.app.goo.gl/FKVbbbHP7tS8JKt39
 
+    - name: Switzerland
+      cities:
+        - name: Zurich
+          spaces:
+            - name: Stereo Bar
+              url: https://www.stereo-bar.ch/
+              map: https://maps.app.goo.gl/uXZNqoEjqMGnGRng6
+
     - name: France
       cities:
         - name: Paris
