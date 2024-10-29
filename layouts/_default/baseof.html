@@ -28,10 +28,6 @@
       <link rel="icon" href="{{ .Permalink }}" />
     {{ end }}
 
-    {{ if hugo.IsServer }}
-      <script src="https://cdn.tailwindcss.com"></script>
-    {{ end }}
-
 
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
