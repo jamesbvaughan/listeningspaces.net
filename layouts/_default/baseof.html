@@ -38,12 +38,15 @@
 
   <body
     class="mb-8 mt-4 mx-4 overflow-y-scroll"
+    style="
+    background-color: #f9f5ed;
     {{ with resources.Get "images/natural-paper.png" | fingerprint }}
-      style="background-image: url({{ .RelPermalink }})"
+      background-image: url({{ .RelPermalink }});
     {{ end }}
+    "
   >
     <div
-      class="container text-black/70 mix-blend-multiply max-w-[720px] mx-auto space-y-8"
+      class="container text-black/70 mix-blend-multiply max-w-[720px] mx-auto my-8 space-y-8"
       style="filter: url(#paper-ink)"
     >
       <header>
@@ -101,8 +104,8 @@
 
     <svg hidden>
       <filter id="paper-ink">
-        <feMorphology operator="dilate" radius="0.4" />
-        <feGaussianBlur stdDeviation="0.3" />
+        <feMorphology operator="dilate" radius="0.5" />
+        <feGaussianBlur stdDeviation="0.2" />
       </filter>
     </svg>
   </body>
