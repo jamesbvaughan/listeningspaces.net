@@ -13,9 +13,10 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "@tailwindcss/cli": "next",
     "concurrently": "^9.0.1",
     "prettier": "^3.3.3",
     "prettier-plugin-go-template": "^0.0.15",
-    "tailwindcss": "^3.4.14"
+    "tailwindcss": "next"
   }
 }
