@@ -8,8 +8,8 @@
   "private": true,
   "scripts": {
     "tailwind": "tailwindcss -i assets/css/input.css -o assets/css/output.css",
-    "dev": "hugo server",
-    "build": "yarn tailwind --minify && hugo --minify",
+    "dev": "concurrently -n tailwind,hugo 'bun run tailwind --watch' 'hugo server'",
+    "build": "bun run tailwind --minify && hugo --minify",
     "format": "prettier --write ."
   },
   "devDependencies": {
@@ -17,6 +17,5 @@
     "prettier": "^3.3.3",
     "prettier-plugin-go-template": "^0.0.15",
     "tailwindcss": "^3.4.14"
-  },
-  "packageManager": "yarn@1.22.19"
+  }
 }
