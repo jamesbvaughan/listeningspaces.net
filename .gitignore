@@ -5,3 +5,5 @@ node_modules
 assets/css/output.css
 
 public
+
+hugo_stats.json

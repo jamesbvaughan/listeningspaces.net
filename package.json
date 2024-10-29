@@ -8,8 +8,8 @@
   "private": true,
   "scripts": {
     "tailwind": "tailwindcss -i assets/css/input.css -o assets/css/output.css",
-    "dev": "concurrently -n tailwind,hugo 'yarn tailwind --watch' 'hugo server'",
-    "build": "yarn tailwind --minify && hugo --minify",
+    "dev": "hugo server",
+    "build": "hugo && yarn tailwind --minify && hugo --minify",
     "format": "prettier --write ."
   },
   "devDependencies": {
