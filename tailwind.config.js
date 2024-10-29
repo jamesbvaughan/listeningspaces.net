@@ -1,4 +1,4 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["hugo_stats.json"],
+  content: ["assets/images/*.svg", "layouts/**/*.html"],
 };

@@ -9,7 +9,7 @@
   "scripts": {
     "tailwind": "tailwindcss -i assets/css/input.css -o assets/css/output.css",
     "dev": "hugo server",
-    "build": "hugo && yarn tailwind --minify && hugo --minify",
+    "build": "yarn tailwind --minify && hugo --minify",
     "format": "prettier --write ."
   },
   "devDependencies": {
