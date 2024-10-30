@@ -7,9 +7,6 @@
   a {
     @apply underline underline-offset-2;
   }
-  p {
-    @apply text-justify;
-  }
   hr {
     @apply border-current;
   }
