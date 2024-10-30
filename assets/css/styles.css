@@ -5,9 +5,10 @@
     font-family: Helvetica, Arial, sans-serif;
   }
   a {
-    @apply underline underline-offset-2;
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
   }
   hr {
-    @apply border-current;
+    border-color: currentColor;
   }
 }
