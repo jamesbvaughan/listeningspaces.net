@@ -7,9 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "tailwind": "tailwindcss -i assets/css/input.css -o assets/css/output.css",
-    "dev": "concurrently -n tailwind,hugo 'bun run tailwind --watch' 'hugo server'",
-    "build": "bun run tailwind --minify && hugo --minify",
+    "dev": "hugo server",
+    "build": "hugo --minify",
     "format": "prettier --write ."
   },
   "devDependencies": {

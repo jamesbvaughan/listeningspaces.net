@@ -33,7 +33,7 @@
 
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
-    {{ with resources.Get "css/output.css" }}
+    {{ with resources.Get "css/styles.css" }}
       {{ $opts := dict "minify" (not hugo.IsServer) "optimize" (not hugo.IsServer) }}
       {{ with . | css.TailwindCSS $opts }}
     <style>{{ .Content | safeCSS }}</style>
