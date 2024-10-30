@@ -1,4 +1,1 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ["assets/images/*.svg", "layouts/**/*.html"],
-};
+// This file is only here to get some editor support for tailwind
