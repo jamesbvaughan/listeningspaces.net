@@ -1,0 +1,9 @@
+{{ $name := .name }}
+{{ with resources.Get .icon | fingerprint }}
+  <img
+    src="{{ .RelPermalink }}"
+    alt="{{ $name }}"
+    title="{{ $name }}"
+    class="w-4"
+  />
+{{ end }}

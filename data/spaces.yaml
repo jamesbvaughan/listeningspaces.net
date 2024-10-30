@@ -9,24 +9,33 @@
                 - name: Bar Shiru
                   url: https://www.barshiru.com/
                   map: https://maps.app.goo.gl/RFgNRBLiWe9WfBoC9
+                  tags:
+                    - bar
 
             - name: San Francisco
               spaces:
                 - name: Yokai
                   url: https://yokaisf.com/
                   map: https://maps.app.goo.gl/fqRNL3YtZSXCtmvK7
+                  tags:
+                    - bar
+                    - restaurant
 
             - name: Los Angeles
               spaces:
                 - name: Goldline
                   url: https://www.goldlinebar.com/
                   map: https://maps.app.goo.gl/n2LW9MYiSDC5qG636
+                  tags:
+                    - bar
 
             - name: San Diego
               spaces:
                 - name: Part Time Lover
                   url: http://parttimeloverhifi.com/
                   map: https://maps.app.goo.gl/fGz36USovMofYENS8
+                  tags:
+                    - bar
 
         - name: Florida
           cities:
@@ -35,10 +44,14 @@
                 - name: Dante's HiFi
                   url: http://danteshifi.com/
                   map: https://maps.app.goo.gl/v6yGm5wRmWZuYcbi7
+                  tags:
+                    - bar
 
                 - name: Jolene Sound Room
                   url: https://v4-jolenesoundroom.getbento.com/Miami/
                   map: https://maps.app.goo.gl/pj5WDQPRZfWBBLjT7
+                  tags:
+                    - bar
 
         - name: Arizona
           cities:
@@ -47,6 +60,9 @@
                 - name: Central Records
                   url: https://centralrecords824.com/
                   map: https://maps.app.goo.gl/Y3MTq1iLg9ycVtucA
+                  tags:
+                    - bar
+                    - restaurant
 
         - name: Kansas
           cities:
@@ -63,6 +79,9 @@
                 - name: Equipment Room
                   url: https://equipmentroom.com/
                   map: https://maps.app.goo.gl/qKmyoWW2rVmz4SzRA
+                  tags:
+                    - bar
+                    - restaurant
 
         - name: New York
           cities:
@@ -71,30 +90,50 @@
                 - name: Public Records
                   url: http://publicrecords.nyc/
                   map: https://maps.app.goo.gl/aNVtH8kJboqLoj177
+                  tags:
+                    - cafe
+                    - bar
+                    - restaurant
 
                 - name: Jolene Sound Room
                   url: https://v4-jolenesoundroom.getbento.com/Brooklyn/
                   map: https://maps.app.goo.gl/wkpaMxe52BY1QEkv7
+                  tags:
+                    - bar
 
                 - name: Tokyo Record Bar
                   url: https://tokyorecordbar.com/
                   map: https://maps.app.goo.gl/viQoHEi2fCtRNb7i9
+                  tags:
+                    - bar
+                    - restaurant
 
                 - name: Eavesdrop
                   url: https://www.eavesdrop.nyc/
                   map: https://maps.app.goo.gl/bUNTfMUEe8KQJW2T9
+                  tags:
+                    - bar
+                    - restaurant
 
                 - name: Honeycomb Hi-Fi Lounge
                   url: https://honeycombk.com/
                   map: https://maps.app.goo.gl/YYsbBazXsLnF4zmL8
+                  tags:
+                    - bar
 
                 - name: The Last Call
                   url: https://www.thelastcallbk.com/
                   map: https://maps.app.goo.gl/HXLQjp5K6yEJy9B88
+                  tags:
+                    - cafe
+                    - bar
+                    - restaurant
 
                 - name: Café Kitsuné
                   url: https://maisonkitsune.com/mk/us/the-bar-at-cafe-kitsune/
-                  map: https://maps.app.goo.gl/1SrLJbt4dCf3DjiaA
+                  map: https://maps.app.goo.gl/FyW4W4K1AoXeRsTd9
+                  tags:
+                    - bar
 
                 - name: OJAS Listening Room at USM
                   url: https://us.usm.com/blogs/journal-home/devon-turnbull-ojas-listening-room
@@ -107,6 +146,8 @@
                 - name: Shibuya
                   url: https://www.shibuyahifi.com/schedule-hifi
                   map: https://maps.app.goo.gl/dxoZzQfLPWUJRrv79
+                  tags:
+                    - bar
 
         - name: Colorado
           cities:
@@ -115,6 +156,8 @@
                 - name: ESP
                   url: https://esphifi.co/
                   map: https://maps.app.goo.gl/KT7VqMBwxSwZ2CXM7
+                  tags:
+                    - bar
 
     - name: Canada
       cities:
@@ -123,14 +166,21 @@
             - name: The Little Jerry
               url: http://www.thelittlejerry.com/
               map: https://maps.app.goo.gl/tzJxKrKEKpThpfaD8
+              tags:
+                - bar
+                - restaurant
 
             - name: Rooms Coffee | 915 Dupont
               url: https://www.instagram.com/915dupont
               map: https://maps.app.goo.gl/hTZzPzy7H11VSRKr6
+              tags:
+                - cafe
 
             - name: Rooms Coffee | 17 Baldwin
               url: https://www.instagram.com/17baldwinst/
               map: https://maps.app.goo.gl/6odnn27CfSckHtcSA
+              tags:
+                - cafe
 
     - name: Mexico
       cities:
@@ -139,6 +189,8 @@
             - name: Tokyo Music Bar
               url: https://edokobayashi.com/index.php/tokyo-music-bar/
               map: https://maps.app.goo.gl/ob2L4ngwWKKuZ9bA9
+              tags:
+                - bar
 
 - name: Europe
   countries:
@@ -149,6 +201,18 @@
             - name: Fidelity
               url: https://www.fidelitybar.ie
               map: https://maps.app.goo.gl/2bKzHJL1aNRfnnnt9
+              tags:
+                - bar
+
+    - name: Portugal
+      cities:
+        - name: Lisbon
+          spaces:
+            - name: The Kissaten
+              url: https://www.thekissaten.pt/
+              map: https://maps.app.goo.gl/PrH3fGAuDmCweuvE9
+              tags:
+                - bar
 
     - name: United Kingdom
       cities:
@@ -157,10 +221,17 @@
             - name: Brilliant Corners
               url: http://brilliantcornerslondon.co.uk/
               map: https://maps.app.goo.gl/myrNQGg6VvkKeWkt8
+              tags:
+                - bar
+                - restaurant
 
             - name: Spiritland
-              url: https://spiritland.com/
+              url: https://spiritland.com/location/spiritland-kings-cross/
               map: https://maps.app.goo.gl/FKVbbbHP7tS8JKt39
+              tags:
+                - cafe
+                - bar
+                - restaurant
 
     - name: Switzerland
       cities:
@@ -169,6 +240,8 @@
             - name: Stereo Bar
               url: https://www.stereo-bar.ch/
               map: https://maps.app.goo.gl/uXZNqoEjqMGnGRng6
+              tags:
+                - bar
 
     - name: France
       cities:
@@ -177,6 +250,9 @@
             - name: Fréquence
               url: https://www.instagram.com/frequenceparis/
               map: https://maps.app.goo.gl/1vFUQ2zW7Wx99tjH7
+              tags:
+                - bar
+                - restaurant
 
     - name: Spain
       cities:
@@ -185,20 +261,29 @@
             - name: Lonely Bar Hi-Fi
               url: https://www.thelonelybar.com/
               map: https://maps.app.goo.gl/gu96JGsmMymPrZr69
+              tags:
+                - bar
 
             - name: Oblicuo Hi-Fi Bar
               url: http://www.oblicuohifibar.com/
               map: https://maps.app.goo.gl/P2AGTRXRFM2cqKHC6
+              tags:
+                - bar
 
             - name: Curtis Audiophile Cafe
               url: https://curtisaudiocafe.com/
               map: https://maps.app.goo.gl/JQXgSWiCiB5s6mjYA
+              tags:
+                - bar
 
         - name: Madrid
           spaces:
             - name: Tempo Club
               url: https://www.tempoclub.es/
               map: https://maps.app.goo.gl/PpVMNPptPQjRCLLKA
+              tags:
+                - bar
+                - restaurant
 
     - name: Germany
       cities:
@@ -211,14 +296,21 @@
             - name: Rhinoçéros
               url: https://rhinoceros-berlin.com/
               map: https://maps.app.goo.gl/AE3LHgfjgoLucgYv8
+              tags:
+                - bar
+                - restaurant
 
             - name: Unkompress
               url: https://www.instagram.com/unkompress/
               map: https://maps.app.goo.gl/ZfvbmpdVBJLtR2HS8
+              tags:
+                - bar
 
             - name: Bar Neiro
               url: https://barneiro.com/
               map: https://maps.app.goo.gl/XAvWw7SfJVx1YBq78
+              tags:
+                - bar
 
 - name: Asia
   countries:
@@ -228,6 +320,8 @@
           spaces:
             - name: JBS
               map: https://maps.app.goo.gl/HmvqExibvhrkEtKA7
+              tags:
+                - bar
 
     - name: Thailand
       cities:
@@ -236,6 +330,8 @@
             - name: Clutch
               url: https://www.instagram.com/clutchbkk
               map: https://maps.app.goo.gl/bw1nSxtEVZgW2ADT6
+              tags:
+                - bar
 
     - name: South Korea
       cities:
@@ -253,6 +349,9 @@
             - name: Waxflower
               url: http://www.waxflowerbar.com.au/
               map: https://maps.app.goo.gl/N3CLV4xeZY9SZU2D8
+              tags:
+                - bar
+                - restaurant
 
 - name: Middle East
   countries:
@@ -263,3 +362,6 @@
             - name: Romano
               url: https://ontopo.co.il/romano
               map: https://maps.app.goo.gl/p897LCAvqhzdeF5X8
+              tags:
+                - bar
+                - restaurant
