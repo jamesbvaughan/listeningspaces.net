@@ -41,6 +41,16 @@
     </div>
   </div>
 
+  <div>
+    (
+    {{ partial "space-tag.html" (dict "icon" "images/coffee.svg" "name" "Cafe") }}
+    = Cafe,
+    {{ partial "space-tag.html" (dict "icon" "images/martini.svg" "name" "Bar") }}
+    = Bar,
+    {{ partial "space-tag.html" (dict "icon" "images/utensils.svg" "name" "Restaurant") }}
+    = Restaurant )
+  </div>
+
   <hr class="my-8" />
 
   <div class="space-y-4 text-2xl text-justify">
