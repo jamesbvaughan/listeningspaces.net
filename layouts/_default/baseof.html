@@ -31,7 +31,9 @@
     {{ end }}
 
 
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <title>
+      {{ if .Title }}{{ .Title }}{{ " | " }}{{ end }}{{ .Site.Title }}
+    </title>
 
     {{ with resources.Get "css/styles.css" }}
       {{ $opts := dict "minify" (not hugo.IsServer) "optimize" (not hugo.IsServer) }}
