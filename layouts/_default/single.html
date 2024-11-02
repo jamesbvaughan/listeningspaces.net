@@ -31,6 +31,7 @@
       <h2 class="text-4xl">Links</h2>
 
       <div class="space-y-1">
+        {{ if .Params.url }}
         <div class="flex items-center space-x-2">
           {{ with resources.Get "images/globe.svg" | fingerprint }}
             <img src="{{ .Permalink }}" alt="website" />
@@ -40,6 +41,19 @@
             Official website
           </a>
         </div>
+        {{ end }}
+
+        {{ if .Params.instagram }}
+        <div class="flex items-center space-x-2">
+          {{ with resources.Get "images/instagram.svg" | fingerprint }}
+            <img src="{{ .Permalink }}" alt="instagram" height="24" width="24" />
+          {{ end }}
+
+          <a href="{{ .Params.instagram }}?utm_source=listeningspaces.net&utm_medium=referral">
+            Instagram
+          </a>
+        </div>
+        {{ end }}
 
         <div class="flex items-center space-x-2">
           {{ with resources.Get "images/map.svg" | fingerprint }}

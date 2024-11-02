@@ -25,6 +25,7 @@
               spaces:
                 - name: Yokai
                   url: https://yokaisf.com/
+                  instagram: https://www.instagram.com/yokai.sf
                   map: https://maps.app.goo.gl/fqRNL3YtZSXCtmvK7
                   tags:
                     - bar
@@ -180,13 +181,13 @@
                 - restaurant
 
             - name: Rooms Coffee | 915 Dupont
-              url: https://www.instagram.com/915dupont
+              instagram: https://www.instagram.com/915dupont
               map: https://maps.app.goo.gl/hTZzPzy7H11VSRKr6
               tags:
                 - cafe
 
             - name: Rooms Coffee | 17 Baldwin
-              url: https://www.instagram.com/17baldwinst/
+              instagram: https://www.instagram.com/17baldwinst/
               map: https://maps.app.goo.gl/6odnn27CfSckHtcSA
               tags:
                 - cafe
@@ -257,7 +258,7 @@
         - name: Paris
           spaces:
             - name: Fréquence
-              url: https://www.instagram.com/frequenceparis/
+              instagram: https://www.instagram.com/frequenceparis/
               map: https://maps.app.goo.gl/1vFUQ2zW7Wx99tjH7
               tags:
                 - bar
@@ -310,7 +311,7 @@
                 - restaurant
 
             - name: Unkompress
-              url: https://www.instagram.com/unkompress/
+              instagram: https://www.instagram.com/unkompress/
               map: https://maps.app.goo.gl/ZfvbmpdVBJLtR2HS8
               tags:
                 - bar
@@ -337,7 +338,7 @@
         - name: Bangkok
           spaces:
             - name: Clutch
-              url: https://www.instagram.com/clutchbkk
+              instagram: https://www.instagram.com/clutchbkk
               map: https://maps.app.goo.gl/bw1nSxtEVZgW2ADT6
               tags:
                 - bar
