@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="font-semibold">Space</div>
 
-<h1 class="text-6xl">{{ .Title }}</h1>
+<h1 class="text-6xl">{{ .Params.name }}</h1>
 
 <div>{{ .Params.city }}, {{ if .Params.state }}{{ .Params.state }}, {{ end }}{{ .Params.country }}</div>
 

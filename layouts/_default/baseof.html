@@ -1,16 +1,15 @@
-{{ $description := "A directory of hi-fi listening spaces. Find listening rooms, hi-fi bars, and jazz cafes all over the world." }}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ $description }}" />
+    <meta name="description" content="{{ .Description }}" />
 
     <link rel="canonical" href="{{ .Permalink }}" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ .Site.Title }}" />
-    <meta property="og:description" content="{{ $description }}" />
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="{{ .Description }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
 
     {{ with resources.Get "images/og.png" | fingerprint }}
@@ -20,7 +19,7 @@
 
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ .Site.Title }}" />
+    <meta name="twitter:title" content="{{ .Title }}" />
     <meta name="twitter:site" content="@jamesontheline" />
 
     <meta name="theme-color" content="#f9f5ed" />
@@ -31,9 +30,7 @@
     {{ end }}
 
 
-    <title>
-      {{ if .Title }}{{ .Title }}{{ " | " }}{{ end }}{{ .Site.Title }}
-    </title>
+    <title>{{ .Title }}</title>
 
     {{ with resources.Get "css/styles.css" }}
       {{ $opts := dict "minify" (not hugo.IsServer) "optimize" (not hugo.IsServer) }}

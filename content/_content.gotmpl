@@ -23,7 +23,8 @@
               "content" $content
               "kind" "page"
               "path" .name
-              "title" .name
+              "title" (printf "%s | Listening Spaces" .name)
+              "description" (printf "Learn about %s in %s on Listening Spaces, a directory of hi-fi listening bars and cafes around the world." .name $city)
               "params"  (merge . $place)
             }}
             {{ $.AddPage $page }}
@@ -48,7 +49,8 @@
             "content" $content
             "kind" "page"
             "path" .name
-            "title" .name
+            "title" (printf "%s | Listening Spaces" .name)
+            "description" (printf "Learn about %s in %s on Listening Spaces, a directory of hi-fi listening bars and cafes around the world." .name $city)
             "params"  (merge . $place)
           }}
           {{ $.AddPage $page }}
