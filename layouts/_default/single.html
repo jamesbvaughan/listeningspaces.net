@@ -1,102 +1,117 @@
 {{ define "main" }}
-<div class="font-semibold">Space</div>
+  <div class="font-semibold">Space</div>
 
-<h1 class="text-6xl">{{ .Params.name }}</h1>
+  <h1 class="text-6xl">{{ .Params.name }}</h1>
 
-<div>{{ .Params.city }}, {{ if .Params.state }}{{ .Params.state }}, {{ end }}{{ .Params.country }}</div>
+  <div>
+    {{ .Params.city }},
+    {{ if .Params.state }}{{ .Params.state }},{{ end }}{{ .Params.country }}
+  </div>
 
-{{ if .Params.image }}
-  {{ $image := path.Join "images/spaces" .Params.image }}
-  {{ with resources.Get $image | fingerprint }}
-    <img
-      src="{{ .Permalink }}"
-      alt="{{ .Title }}"
-      class="w-full grayscale opacity-70 mt-2"
-    ></img>
-  {{ end }}
-{{ end }}
-
-
-<div class="flex-col sm:flex-row sm:flex sm:space-x-4 mt-4 space-y-6">
-  {{ if .Params.about }}
-    <div class="space-y-2">
-      <h2 class="text-4xl">About</h2>
-
-      {{ .Params.about | markdownify }}
-    </div>
+  {{ if .Params.image }}
+    {{ $image := path.Join "images/spaces" .Params.image }}
+    {{ with resources.Get $image | fingerprint }}
+      <img
+        src="{{ .Permalink }}"
+        alt="{{ .Title }}"
+        class="w-full grayscale opacity-70 mt-2"
+      />
+    {{ end }}
   {{ end }}
 
-  <div class="sm:w-1/3 shrink-0 space-y-6">
-    <div class="space-y-2">
-      <h2 class="text-4xl">Links</h2>
 
-      <div class="space-y-1">
-        {{ if .Params.url }}
-        <div class="flex items-center space-x-2">
-          {{ with resources.Get "images/globe.svg" | fingerprint }}
-            <img src="{{ .Permalink }}" alt="website" />
+  <div class="flex-col sm:flex-row sm:flex sm:space-x-4 mt-4 space-y-6">
+    {{ if .Params.about }}
+      <div class="space-y-2">
+        <h2 class="text-4xl">About</h2>
+
+        {{ .Params.about | markdownify }}
+      </div>
+    {{ end }}
+
+
+    <div class="sm:w-1/3 shrink-0 space-y-6">
+      <div class="space-y-2">
+        <h2 class="text-4xl">Links</h2>
+
+        <div class="space-y-1">
+          {{ if .Params.url }}
+            <div class="flex items-center space-x-2">
+              {{ with resources.Get "images/globe.svg" | fingerprint }}
+                <img src="{{ .Permalink }}" alt="website" />
+              {{ end }}
+
+
+              <a
+                href="{{ .Params.url }}?utm_source=listeningspaces.net&utm_medium=referral"
+              >
+                Official website
+              </a>
+            </div>
           {{ end }}
 
-          <a href="{{ .Params.url }}?utm_source=listeningspaces.net&utm_medium=referral">
-            Official website
-          </a>
-        </div>
-        {{ end }}
+          {{ if .Params.instagram }}
+            <div class="flex items-center space-x-2">
+              {{ with resources.Get "images/instagram.svg" | fingerprint }}
+                <img
+                  src="{{ .Permalink }}"
+                  alt="instagram"
+                  height="24"
+                  width="24"
+                />
+              {{ end }}
 
-        {{ if .Params.instagram }}
-        <div class="flex items-center space-x-2">
-          {{ with resources.Get "images/instagram.svg" | fingerprint }}
-            <img src="{{ .Permalink }}" alt="instagram" height="24" width="24" />
+
+              <a
+                href="{{ .Params.instagram }}?utm_source=listeningspaces.net&utm_medium=referral"
+              >
+                Instagram
+              </a>
+            </div>
           {{ end }}
 
-          <a href="{{ .Params.instagram }}?utm_source=listeningspaces.net&utm_medium=referral">
-            Instagram
-          </a>
-        </div>
-        {{ end }}
 
-        <div class="flex items-center space-x-2">
-          {{ with resources.Get "images/map.svg" | fingerprint }}
-            <img src="{{ .RelPermalink }}" alt="map" height="24" width="24" />
-          {{ end }}
+          <div class="flex items-center space-x-2">
+            {{ with resources.Get "images/map.svg" | fingerprint }}
+              <img src="{{ .RelPermalink }}" alt="map" height="24" width="24" />
+            {{ end }}
 
-          <a href="{{ .Params.map }}?utm_source=listeningspaces.net&utm_medium=referral">
-            Open in Google Maps
-          </a>
+
+            <a
+              href="{{ .Params.map }}?utm_source=listeningspaces.net&utm_medium=referral"
+            >
+              Open in Google Maps
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="space-y-2">
-      <h2 class="text-4xl">Facilities</h2>
+      <div class="space-y-2">
+        <h2 class="text-4xl">Facilities</h2>
 
-      <div class="space-y-1">
-        {{ if in .Params.tags "cafe" }}
-          {{ partial "tag.html" (dict "icon" "images/coffee.svg" "label" "Cafe") }}
-        {{ end }}
-        {{ if in .Params.tags "bar" }}
-          {{ partial "tag.html" (dict "icon" "images/martini.svg" "label" "Bar") }}
-        {{ end }}
-        {{ if in .Params.tags "restaurant" }}
-          {{ partial "tag.html" (dict "icon" "images/utensils.svg" "label" "Restaurant") }}
-        {{ end }}
+        <div class="space-y-1">
+          {{ if in .Params.tags "cafe" }}
+            {{ partial "tag.html" (dict "icon" "images/coffee.svg" "label" "Cafe") }}
+          {{ end }}
+          {{ if in .Params.tags "bar" }}
+            {{ partial "tag.html" (dict "icon" "images/martini.svg" "label" "Bar") }}
+          {{ end }}
+          {{ if in .Params.tags "restaurant" }}
+            {{ partial "tag.html" (dict "icon" "images/utensils.svg" "label" "Restaurant") }}
+          {{ end }}
+        </div>
       </div>
     </div>
   </div>
-</div>
 {{ end }}
 
 {{ define "partials/tag.html" }}
-<div class="flex items-center space-x-2">
-  {{ with resources.Get .icon }}
-    <img
-      src="{{ .Permalink }}"
-      class="opacity-70"
-      height="24"
-      width="24"
-    />
-  {{ end }}
+  <div class="flex items-center space-x-2">
+    {{ with resources.Get .icon }}
+      <img src="{{ .Permalink }}" class="opacity-70" height="24" width="24" />
+    {{ end }}
 
-  <div>{{ .label }}</div>
-</div>
+
+    <div>{{ .label }}</div>
+  </div>
 {{ end }}
