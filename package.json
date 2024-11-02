@@ -9,10 +9,13 @@
   "scripts": {
     "dev": "hugo server",
     "build": "hugo --minify",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lint-data": "ajv -s data/spaces.schema.json -d data/spaces.yaml -c ajv-formats"
   },
   "devDependencies": {
     "@tailwindcss/cli": "next",
+    "ajv-cli": "^5.0.0",
+    "ajv-formats": "^3.0.1",
     "concurrently": "^9.0.1",
     "prettier": "^3.3.3",
     "prettier-plugin-go-template": "^0.0.15",

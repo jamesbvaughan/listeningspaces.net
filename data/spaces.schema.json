@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["name", "countries"],
+    "additionalProperties": false,
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "countries": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": ["name", "cities"],
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "cities": { "$ref": "#/$defs/cities" }
+              }
+            },
+            {
+              "type": "object",
+              "required": ["name", "states"],
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "states": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["name", "cities"],
+                    "additionalProperties": false,
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "cities": { "$ref": "#/$defs/cities" }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  "$defs": {
+    "cities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "spaces"],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "spaces": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/space" }
+          }
+        }
+      }
+    },
+    "space": {
+      "type": "object",
+      "required": ["name", "map"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "map": { "type": "string", "format": "uri" },
+        "instagram": { "type": "string", "format": "uri" },
+        "image": { "type": "string" },
+        "about": { "type": "string" },
+        "tags": {
+          "type": "array",
+          "items": { "enum": ["bar", "cafe", "restaurant"] }
+        }
+      }
+    }
+  }
+}
