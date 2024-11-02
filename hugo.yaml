@@ -4,10 +4,9 @@ languageCode: en-us
 
 buildDrafts: false
 disableKinds:
-  - taxonomy
   - term
   - section
-  - page
+  - taxonomy
   - RSS
 
 build:

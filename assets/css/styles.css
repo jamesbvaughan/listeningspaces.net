@@ -11,4 +11,19 @@
   hr {
     border-color: currentColor;
   }
+  blockquote {
+    border-left: 4px solid currentColor;
+    padding-left: 1rem;
+    font-style: italic;
+  }
+  blockquote p {
+    margin: 10px 0;
+  }
+}
+
+@layer utilities {
+  ::selection {
+    color: #f9f5ed;
+    background: rgba(0, 0, 0, 0.7);
+  }
 }

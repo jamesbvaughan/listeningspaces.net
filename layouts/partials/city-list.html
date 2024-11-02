@@ -8,10 +8,7 @@
           <li class="text-xl font-light text-nowrap space-y-1">
             <div class="flex items-center space-x-2">
               {{ if .url }}
-                <a
-                  href="{{ .url }}?utm_source=listeningspaces.net&utm_medium=referral"
-                  >{{ .name }}</a
-                >
+                <a href="/{{ .name | urlize }}">{{ .name }}</a>
               {{ else }}
                 <div>
                   {{ .name }}

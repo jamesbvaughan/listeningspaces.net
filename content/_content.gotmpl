@@ -1,0 +1,60 @@
+{{ range .Site.Data.spaces }}
+  {{ $continent := .name }}
+
+  {{ range .countries }}
+    {{ $country := .name }}
+
+    <!-- For the US, include the state level -->
+    {{ if eq .name "United States of America" }}
+      {{ range  .states  }}
+        {{ $state := .name }}
+
+        {{ range .cities  }}
+          {{ $city := .name }}
+          {{ $place := (dict "city" $city "country" $country "state" $state) }}
+
+          {{ range .spaces  }}
+
+            {{ $content := dict
+              "mediaType" "text/markdown"
+              "value" "some page content"
+            }}
+            {{ $page := dict
+              "content" $content
+              "kind" "page"
+              "path" .name
+              "title" .name
+              "params"  (merge . $place)
+            }}
+            {{ $.AddPage $page }}
+
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ else }}
+
+      <!-- For other countries, include cities directly -->
+      {{ range  .cities  }}
+        {{ $city := .name }}
+        {{ $place := (dict "city" $city "country" $country) }}
+
+        {{ range  .spaces  }}
+
+          {{ $content := dict
+            "mediaType" "text/markdown"
+            "value" "some page content"
+          }}
+          {{ $page := dict
+            "content" $content
+            "kind" "page"
+            "path" .name
+            "title" .name
+            "params"  (merge . $place)
+          }}
+          {{ $.AddPage $page }}
+
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
