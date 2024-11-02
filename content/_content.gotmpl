@@ -4,16 +4,17 @@
   {{ range .countries }}
     {{ $country := .name }}
 
+
     <!-- For the US, include the state level -->
     {{ if eq .name "United States of America" }}
-      {{ range  .states  }}
+      {{ range  .states }}
         {{ $state := .name }}
 
-        {{ range .cities  }}
+        {{ range .cities }}
           {{ $city := .name }}
           {{ $place := (dict "city" $city "country" $country "state" $state) }}
 
-          {{ range .spaces  }}
+          {{ range .spaces }}
 
             {{ $content := dict
               "mediaType" "text/markdown"
@@ -33,13 +34,12 @@
         {{ end }}
       {{ end }}
     {{ else }}
-
       <!-- For other countries, include cities directly -->
-      {{ range  .cities  }}
+      {{ range  .cities }}
         {{ $city := .name }}
         {{ $place := (dict "city" $city "country" $country) }}
 
-        {{ range  .spaces  }}
+        {{ range  .spaces }}
 
           {{ $content := dict
             "mediaType" "text/markdown"
