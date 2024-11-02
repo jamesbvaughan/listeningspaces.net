@@ -1,0 +1,36 @@
+<header>
+  <h1 class="sm:hidden text-4xl uppercase text-center my-4">
+    <a href="/" class="no-underline">Listening Spaces</a>
+  </h1>
+
+  <div class="flex justify-between items-end">
+    {{ with resources.Get "images/speaker.svg" | resources.Fingerprint }}
+      <img
+        src="{{ .RelPermalink }}"
+        class="h-28 w-28 sm:h-[120px] sm:w-24"
+        alt="Speaker"
+      />
+    {{ end }}
+
+
+    <h1 class="hidden sm:block text-6xl leading-none uppercase">
+      <a href="/" class="no-underline">Listening<br />Spaces</a>
+    </h1>
+
+    {{ with resources.Get "images/turntable.svg" | resources.Fingerprint }}
+      <img
+        src="{{ .RelPermalink }}"
+        class="w-24 h-24 sm:w-32 sm:h-24 min-w-10 shrink"
+        alt="Turntable"
+      />
+    {{ end }}
+
+    {{ with resources.Get "images/speaker.svg" | resources.Fingerprint }}
+      <img
+        src="{{ .RelPermalink }}"
+        class="scale-x-[-1] h-28 w-28 sm:h-[120px] sm:w-24"
+        alt="Speaker"
+      />
+    {{ end }}
+  </div>
+</header>
