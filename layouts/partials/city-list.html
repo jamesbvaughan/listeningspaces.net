@@ -7,13 +7,7 @@
         {{ range sort .spaces "name" }}
           <li class="text-xl font-light text-nowrap space-y-1">
             <div class="flex items-center space-x-2">
-              {{ if .url }}
-                <a href="/{{ .name | urlize }}">{{ .name }}</a>
-              {{ else }}
-                <div>
-                  {{ .name }}
-                </div>
-              {{ end }}
+              <a href="/{{ .name | urlize }}">{{ .name }}</a>
               <a
                 href="{{ .map }}"
                 class="w-6 opacity-50 hover:opacity-70"
