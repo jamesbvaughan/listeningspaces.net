@@ -56,6 +56,27 @@
                   tags:
                     - bar
 
+                - name: Convoy Music Bar
+                  image: convoy.jpg
+                  url: https://www.convoymusicbar.com
+                  map: https://maps.app.goo.gl/dp7AbJKGVdcKYwjg7
+                  instagram: https://www.instagram.com/convoymusicbar/
+                  tags:
+                    - bar
+                  about: |-
+                    From Convoy's website:
+
+                    > Convoy Music Bar is a cocktail bar inspired by the
+                    listening bars of Tokyo Japan.
+                    We are dedicated to providing the best listening experience
+                    to our guests through our rare custom built sound system
+                    imported from Japan.
+                    Our cocktail program is designed meticulously with an
+                    emphasis on delivering each cocktail to the highest
+                    standard.
+                    We take pride in having a relaxed atmosphere where every
+                    guest has a great seat and comfort.
+
         - name: Florida
           cities:
             - name: Miami
