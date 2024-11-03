@@ -1,21 +1,29 @@
 {{ define "main" }}
-  <div class="font-semibold">Space</div>
+  <p class="font-semibold">Space</p>
 
   <h1 class="text-6xl">{{ .Params.name }}</h1>
 
-  <div>
+  <p>
     {{ .Params.city }},
     {{ if .Params.state }}{{ .Params.state }},{{ end }}{{ .Params.country }}
-  </div>
+  </p>
 
   {{ if .Params.image }}
+    {{ $alt := .Params.name }}
     {{ $image := path.Join "images/spaces" .Params.image }}
-    {{ with resources.Get $image | fingerprint }}
-      <img
-        src="{{ .Permalink }}"
-        alt="{{ .Title }}"
-        class="w-full grayscale opacity-70 mt-2"
-      />
+    {{ with resources.Get $image }}
+      {{ $filters := slice
+        (images.Process "resize 720x")
+        (images.Grayscale)
+        (images.Process "webp")
+      }}
+      {{ with images.Filter $filters . }}
+        <img
+          src="{{ .Permalink }}"
+          alt="{{ $alt }}"
+          class="w-full mt-2 opacity-70"
+        />
+      {{ end }}
     {{ end }}
   {{ end }}
 
@@ -34,9 +42,9 @@
       <div class="space-y-2">
         <h2 class="text-4xl">Links</h2>
 
-        <div class="space-y-1">
+        <ul class="space-y-1">
           {{ if .Params.url }}
-            <div class="flex items-center space-x-2">
+            <li class="flex items-center space-x-2">
               {{ with resources.Get "images/icons/globe.svg" | fingerprint }}
                 <img src="{{ .Permalink }}" alt="website" />
               {{ end }}
@@ -47,11 +55,11 @@
               >
                 Official website
               </a>
-            </div>
+            </li>
           {{ end }}
 
           {{ if .Params.instagram }}
-            <div class="flex items-center space-x-2">
+            <li class="flex items-center space-x-2">
               {{ with resources.Get "images/icons/instagram.svg" | fingerprint }}
                 <img
                   src="{{ .Permalink }}"
@@ -67,11 +75,11 @@
               >
                 Instagram
               </a>
-            </div>
+            </li>
           {{ end }}
 
           {{ if .Params.soundcloud }}
-            <div class="flex items-center space-x-2">
+            <li class="flex items-center space-x-2">
               {{ with resources.Get "images/icons/soundcloud.svg" | fingerprint }}
                 <img
                   src="{{ .Permalink }}"
@@ -87,11 +95,11 @@
               >
                 Soundcloud
               </a>
-            </div>
+            </li>
           {{ end }}
 
           {{ if .Params.mixcloud }}
-            <div class="flex items-center space-x-2">
+            <li class="flex items-center space-x-2">
               {{ with resources.Get "images/icons/mixcloud.svg" | fingerprint }}
                 <img src="{{ .Permalink }}" alt="mixcloud" width="24" />
               {{ end }}
@@ -102,11 +110,11 @@
               >
                 Mixcloud
               </a>
-            </div>
+            </li>
           {{ end }}
 
           {{ if .Params.spotify }}
-            <div class="flex items-center space-x-2">
+            <li class="flex items-center space-x-2">
               {{ with resources.Get "images/icons/spotify.svg" | fingerprint }}
                 <img src="{{ .Permalink }}" alt="spotify" width="24" />
               {{ end }}
@@ -117,11 +125,11 @@
               >
                 Spotify
               </a>
-            </div>
+            </li>
           {{ end }}
 
           {{ if .Params.youtube }}
-            <div class="flex items-center space-x-2">
+            <li class="flex items-center space-x-2">
               {{ with resources.Get "images/icons/youtube.svg" | fingerprint }}
                 <img src="{{ .Permalink }}" alt="youtube" width="24" />
               {{ end }}
@@ -132,11 +140,11 @@
               >
                 YouTube
               </a>
-            </div>
+            </li>
           {{ end }}
 
 
-          <div class="flex items-center space-x-2">
+          <li class="flex items-center space-x-2">
             {{ with resources.Get "images/icons/map.svg" | fingerprint }}
               <img src="{{ .RelPermalink }}" alt="map" height="24" width="24" />
             {{ end }}
@@ -147,15 +155,15 @@
             >
               Open in Google Maps
             </a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
 
       {{ if .Params.tags }}
         <div class="space-y-2">
           <h2 class="text-4xl">Facilities</h2>
 
-          <div class="space-y-1">
+          <ul class="space-y-1">
             {{ if in .Params.tags "cafe" }}
               {{ partial "tag.html" (dict "icon" "images/icons/coffee.svg" "label" "Cafe") }}
             {{ end }}
@@ -165,7 +173,7 @@
             {{ if in .Params.tags "restaurant" }}
               {{ partial "tag.html" (dict "icon" "images/icons/utensils.svg" "label" "Restaurant") }}
             {{ end }}
-          </div>
+          </ul>
         </div>
       {{ end }}
     </div>
@@ -173,12 +181,12 @@
 {{ end }}
 
 {{ define "partials/tag.html" }}
-  <div class="flex items-center space-x-2">
+  <li class="flex items-center space-x-2">
     {{ with resources.Get .icon }}
       <img src="{{ .Permalink }}" class="opacity-70" height="24" width="24" />
     {{ end }}
 
 
     <div>{{ .label }}</div>
-  </div>
+  </li>
 {{ end }}
