@@ -50,7 +50,7 @@
             {{ if .Params.url }}
               <li class="flex items-center space-x-2">
                 {{ with resources.Get "images/icons/globe.svg" | fingerprint }}
-                  <img src="{{ .Permalink }}" alt="website" />
+                  <img src="{{ .Permalink }}" alt="" />
                 {{ end }}
 
 
@@ -96,7 +96,7 @@
             {{ if .Params.mixcloud }}
               <li class="flex items-center space-x-2">
                 {{ with resources.Get "images/icons/mixcloud.svg" | fingerprint }}
-                  <img src="{{ .Permalink }}" alt="mixcloud" width="24" />
+                  <img src="{{ .Permalink }}" alt="" width="24" />
                 {{ end }}
 
 
@@ -111,7 +111,7 @@
             {{ if .Params.spotify }}
               <li class="flex items-center space-x-2">
                 {{ with resources.Get "images/icons/spotify.svg" | fingerprint }}
-                  <img src="{{ .Permalink }}" alt="spotify" width="24" />
+                  <img src="{{ .Permalink }}" alt="" width="24" />
                 {{ end }}
 
 
@@ -126,7 +126,7 @@
             {{ if .Params.youtube }}
               <li class="flex items-center space-x-2">
                 {{ with resources.Get "images/icons/youtube.svg" | fingerprint }}
-                  <img src="{{ .Permalink }}" alt="youtube" width="24" />
+                  <img src="{{ .Permalink }}" alt="" width="24" />
                 {{ end }}
 
 
@@ -141,12 +141,7 @@
 
             <li class="flex items-center space-x-2">
               {{ with resources.Get "images/icons/map.svg" | fingerprint }}
-                <img
-                  src="{{ .RelPermalink }}"
-                  alt="map"
-                  height="24"
-                  width="24"
-                />
+                <img src="{{ .RelPermalink }}" alt="" height="24" width="24" />
               {{ end }}
 
 
@@ -183,8 +178,15 @@
 
 {{ define "partials/tag.html" }}
   <li class="flex items-center space-x-2">
+    {{ $label := .label }}
     {{ with resources.Get .icon }}
-      <img src="{{ .Permalink }}" class="opacity-70" height="24" width="24" />
+      <img
+        src="{{ .Permalink }}"
+        alt=""
+        class="opacity-70"
+        height="24"
+        width="24"
+      />
     {{ end }}
 
 
