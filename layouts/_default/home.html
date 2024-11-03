@@ -88,3 +88,72 @@
     </div>
   </div>
 {{ end }}
+
+{{ define "partials/city-list.html" }}
+  <div class="flex flex-wrap gap-8">
+    {{ range sort .cities "name" }}
+      <div class="space-y-1" itemscope itemtype="https://schema.org/City">
+        <h6 class="text-2xl text-nowrap" itemprop="name">{{ .name }}</h6>
+
+        <ul class="space-y-1">
+          {{ range sort .spaces "name" }}
+            <li
+              class="text-xl font-light text-nowrap space-y-1"
+              itemscope
+              itemtype="https://schema.org/BarOrPub"
+            >
+              <div class="flex items-center space-x-2">
+                <a
+                  href="/{{ default .name .path | urlize }}"
+                  itemprop="name url"
+                  >{{ .name }}</a
+                >
+                <a
+                  itemprops="hasMap"
+                  href="{{ .map }}"
+                  class="w-6 opacity-50 hover:opacity-70"
+                  aria-label="Google Maps link for {{ .name }}"
+                >
+                  {{ with resources.Get "images/icons/map.svg" | resources.Fingerprint }}
+                    <img
+                      src="{{ .RelPermalink }}"
+                      alt="Map"
+                      height="24"
+                      width="24"
+                    />
+                  {{ end }}
+                </a>
+              </div>
+
+              <div class="flex items-center space-x-2">
+                {{ if in .tags "cafe" }}
+                  {{ partial "space-tag.html" (dict "icon" "images/icons/coffee.svg" "name" "Cafe") }}
+                {{ end }}
+                {{ if in .tags "bar" }}
+                  {{ partial "space-tag.html" (dict "icon" "images/icons/martini.svg" "name" "Bar") }}
+                {{ end }}
+                {{ if in .tags "restaurant" }}
+                  {{ partial "space-tag.html" (dict "icon" "images/icons/utensils.svg" "name" "Restaurant") }}
+                {{ end }}
+              </div>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
+
+{{ define "partials/space-tag.html" }}
+  {{ $name := .name }}
+  {{ with resources.Get .icon | fingerprint }}
+    <img
+      src="{{ .RelPermalink }}"
+      alt="{{ $name }}"
+      title="{{ $name }}"
+      class="opacity-70"
+      height="16"
+      width="16"
+    />
+  {{ end }}
+{{ end }}
