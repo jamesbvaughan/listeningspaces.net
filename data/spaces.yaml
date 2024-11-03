@@ -495,6 +495,68 @@
                 including jazz, soul, rock, funk, country & western, reggae,
                 ambient, pop, indie, disco, electronic music and more.
 
+            - name: Jazu
+              image: jazu.jpg
+              url: https://www.jazudrinks.com/
+              map: https://maps.app.goo.gl/YJbPy4ET7Shdp2mq8
+              instagram: https://www.instagram.com/jazu.bar/
+              tags:
+                - cafe
+                - bar
+                - restaurant
+              about: |-
+                From Jazu's website:
+
+                > Owner-run and owner-operated, JAZU was founded by Scott, Jimmy
+                and Rosie.
+                With a combined 20+ years in kitchens and bars across the UK,
+                we've been working on creating our own place for some time - our
+                version of everyone's favourite place to be - a bar.
+                >
+                > JAZU is our idea of a good night out.
+                It is an intimate and informal space, with a DJ booth and
+                bespoke sound-system.
+                There's a varied music programme, a disco ball, and a bit of
+                dancing after dark.
+                There are serious drinks and a selection of quality bar snacks.
+
+            - name: All My Friends
+              image: all-my-friends.jpg
+              url: https://www.allmyfriends.uk/
+              map: https://maps.app.goo.gl/g2H7ASTYDa38LvMy5
+              instagram: https://www.instagram.com/allmyfriends.uk/
+              tags:
+                - bar
+                - restaurant
+              about: |-
+                From All My Friends' website:
+
+                > A HACKNEY WICK HANGOUT FROM DIY PARTY COLLECTIVE THE CAUSE.
+                A MORE LAIDBACK AFFAIR FEATURING A RECORD SHOP AND A
+                CUSTOM-BUILT HIGH FIDELITY SOUND SYSTEM SOUNDTRACKED BY OUR
+                FAVOURITE SELECTORS.
+                FOOD OFFERINGS INCLUDE FRESH SOURDOUGH PIZZAS FROM P.L.U.R.
+                ALONGSIDE DELICIOUS COCKTAILS, NATURAL & ORGANIC WINES AND LOCAL
+                CRAFT BEER.
+                >
+                > A place for the friends we've met along the way, a place for
+                all the friends we're yet to meet.
+
+            - name: Behind This Wall
+              url: https://behindthiswall.com/
+              map: https://maps.app.goo.gl/mHeoQE5fajsHuStD7
+              instagram: https://www.instagram.com/btwldn/
+              mixcloud: https://www.mixcloud.com/behindthiswall/
+              about: |-
+                From Behind This Wall's website:
+
+                > Lo-fi bar with hi-fi intentions, hidden beneath the Narrow
+                Way, Hackney Central.
+                >
+                > Behind This Wall is a relaxed basement bar with a warm,
+                vintage sound-system.
+                Service is all-seated so bookings are highly recommended.
+
     - name: Switzerland
       cities:
         - name: Zurich
