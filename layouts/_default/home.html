@@ -25,6 +25,7 @@
                   itemtype="https://schema.org/Country"
                 >
                   <h4
+                    id="{{ .name | anchorize }}"
                     class="text-4xl flex items-center space-x-2"
                     itemprop="name"
                   >
@@ -40,7 +41,13 @@
                           itemscope
                           itemtype="https://schema.org/State"
                         >
-                          <h5 class="text-3xl" itemprop="name">{{ .name }}</h5>
+                          <h5
+                            class="text-3xl"
+                            itemprop="name"
+                            id="{{ .name | anchorize }}"
+                          >
+                            {{ .name }}
+                          </h5>
                           {{ partial "city-list.html" . }}
                         </div>
                       {{ end }}
@@ -93,7 +100,13 @@
   <div class="flex flex-wrap gap-8">
     {{ range sort .cities "name" }}
       <div class="space-y-1" itemscope itemtype="https://schema.org/City">
-        <h6 class="text-2xl text-nowrap" itemprop="name">{{ .name }}</h6>
+        <h6
+          class="text-2xl text-nowrap"
+          itemprop="name"
+          id="{{ .name | anchorize }}"
+        >
+          {{ .name }}
+        </h6>
 
         <ul class="space-y-1">
           {{ range sort .spaces "name" }}

@@ -5,8 +5,17 @@
     <h1 class="text-6xl" itemprop="name">{{ .Params.name }}</h1>
 
     <p itemprop="location">
-      {{ .Params.city }},
-      {{ if .Params.state }}{{ .Params.state }},{{ end }}{{ .Params.country }}
+      <a href="/#{{ .Params.city | anchorize }}" class="no-underline"
+        >{{ .Params.city }}</a
+      >,
+      {{ if .Params.state }}
+        <a href="/#{{ .Params.state | anchorize }}" class="no-underline"
+          >{{ .Params.state }}</a
+        >,{{ " " }}
+      {{ end }}
+      <a href="/#{{ .Params.country | anchorize }}" class="no-underline"
+        >{{ .Params.country }}</a
+      >
     </p>
 
     {{ if .Params.image }}
