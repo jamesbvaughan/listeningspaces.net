@@ -82,6 +82,10 @@
         "url": { "type": "string", "format": "uri" },
         "map": { "type": "string", "format": "uri" },
         "instagram": { "type": "string", "format": "uri" },
+        "soundcloud": { "type": "string", "format": "uri" },
+        "youtube": { "type": "string", "format": "uri" },
+        "mixcloud": { "type": "string", "format": "uri" },
+        "spotify": { "type": "string", "format": "uri" },
         "image": { "type": "string" },
         "about": { "type": "string" },
         "tags": {
