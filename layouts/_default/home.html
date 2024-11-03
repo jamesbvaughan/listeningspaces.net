@@ -5,15 +5,29 @@
 
       <div class="space-y-14">
         {{ range .Site.Data.spaces }}
-          <div class="space-y-2">
-            <h3 class="text-xl uppercase font-semibold text-gray-500">
+          <div
+            class="space-y-2"
+            itemscope
+            itemtype="https://schema.org/Continent"
+          >
+            <h3
+              class="text-xl uppercase font-semibold text-gray-500"
+              itemprop="name"
+            >
               {{ .name }}
             </h3>
 
             <div class="space-y-10">
               {{ range .countries }}
-                <div class="space-y-4">
-                  <h4 class="text-4xl flex items-center space-x-2">
+                <div
+                  class="space-y-4"
+                  itemscope
+                  itemtype="https://schema.org/Country"
+                >
+                  <h4
+                    class="text-4xl flex items-center space-x-2"
+                    itemprop="name"
+                  >
                     {{ .name }}
                   </h4>
 
@@ -21,8 +35,12 @@
                   {{ if eq .name "United States of America" }}
                     <div class="space-y-8">
                       {{ range sort .states "name" }}
-                        <div class="space-y-2">
-                          <h5 class="text-3xl">{{ .name }}</h5>
+                        <div
+                          class="space-y-2"
+                          itemscope
+                          itemtype="https://schema.org/State"
+                        >
+                          <h5 class="text-3xl" itemprop="name">{{ .name }}</h5>
                           {{ partial "city-list.html" . }}
                         </div>
                       {{ end }}
@@ -43,7 +61,12 @@
 
   <hr class="my-8" />
 
-  <div class="space-y-4 text-2xl text-justify">
+  <div
+    class="space-y-4 text-2xl text-justify"
+    itemprop="description"
+    itemscope
+    itemtype="https://schema.org/AboutPage"
+  >
     <h2 class="text-6xl">About</h2>
 
     <p>

@@ -43,6 +43,8 @@
   </head>
 
   <body
+    itemscope
+    itemtype="https://schema.org/WebSite"
     class="mb-8 mt-4 mx-4 overflow-y-scroll"
     style="
     background-color: #f9f5ed;
@@ -51,6 +53,9 @@
     {{ end }}
     "
   >
+    <meta itemprop="name" content="{{ .Site.Title }}" />
+    <meta itemprop="url" content="{{ .Site.BaseURL }}" />
+
     <div
       class="container text-black/70 relative mix-blend-multiply max-w-[720px] mx-auto my-8 space-y-8"
     >
