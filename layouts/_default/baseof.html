@@ -48,8 +48,10 @@
     class="mb-8 mt-4 mx-4 overflow-y-scroll"
     style="
     background-color: #f9f5ed;
-    {{ with resources.Get "images/natural-paper.png" | fingerprint }}
-      background-image: url({{ .RelPermalink }});
+    {{ with resources.Get "images/natural-paper.png" }}
+      {{ with images.Filter (images.Process "webp") . }}
+        background-image: url({{ .RelPermalink }});
+      {{ end }}
     {{ end }}
     "
   >
