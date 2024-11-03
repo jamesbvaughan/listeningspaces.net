@@ -102,28 +102,9 @@
               itemscope
               itemtype="https://schema.org/BarOrPub"
             >
-              <div class="flex items-center space-x-2">
-                <a
-                  href="/{{ default .name .path | urlize }}"
-                  itemprop="name url"
-                  >{{ .name }}</a
-                >
-                <a
-                  itemprops="hasMap"
-                  href="{{ .map }}"
-                  class="w-6 opacity-50 hover:opacity-70"
-                  aria-label="Google Maps link for {{ .name }}"
-                >
-                  {{ with resources.Get "images/icons/map.svg" | resources.Fingerprint }}
-                    <img
-                      src="{{ .RelPermalink }}"
-                      alt="Map"
-                      height="24"
-                      width="24"
-                    />
-                  {{ end }}
-                </a>
-              </div>
+              <a href="/{{ default .name .path | urlize }}" itemprop="name url"
+                >{{ .name }}</a
+              >
 
               <div class="flex items-center space-x-2">
                 {{ if in .tags "cafe" }}
