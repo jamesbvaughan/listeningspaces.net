@@ -87,6 +87,7 @@
         "mixcloud": { "type": "string", "format": "uri" },
         "spotify": { "type": "string", "format": "uri" },
         "image": { "type": "string" },
+        "notes": { "type": "string" },
         "about": { "type": "string" },
         "tags": {
           "type": "array",
