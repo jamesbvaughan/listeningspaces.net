@@ -66,12 +66,7 @@
             {{ if .Params.instagram }}
               <li class="flex items-center space-x-2">
                 {{ with resources.Get "images/icons/instagram.svg" | fingerprint }}
-                  <img
-                    src="{{ .Permalink }}"
-                    alt="instagram"
-                    height="24"
-                    width="24"
-                  />
+                  <img src="{{ .Permalink }}" alt="" height="24" width="24" />
                 {{ end }}
 
 
@@ -86,12 +81,7 @@
             {{ if .Params.soundcloud }}
               <li class="flex items-center space-x-2">
                 {{ with resources.Get "images/icons/soundcloud.svg" | fingerprint }}
-                  <img
-                    src="{{ .Permalink }}"
-                    alt="soundcloud"
-                    height="24"
-                    width="24"
-                  />
+                  <img src="{{ .Permalink }}" alt="" height="24" width="24" />
                 {{ end }}
 
 
