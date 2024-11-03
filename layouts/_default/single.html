@@ -37,7 +37,7 @@
         <div class="space-y-1">
           {{ if .Params.url }}
             <div class="flex items-center space-x-2">
-              {{ with resources.Get "images/globe.svg" | fingerprint }}
+              {{ with resources.Get "images/icons/globe.svg" | fingerprint }}
                 <img src="{{ .Permalink }}" alt="website" />
               {{ end }}
 
@@ -52,7 +52,7 @@
 
           {{ if .Params.instagram }}
             <div class="flex items-center space-x-2">
-              {{ with resources.Get "images/instagram.svg" | fingerprint }}
+              {{ with resources.Get "images/icons/instagram.svg" | fingerprint }}
                 <img
                   src="{{ .Permalink }}"
                   alt="instagram"
@@ -70,9 +70,74 @@
             </div>
           {{ end }}
 
+          {{ if .Params.soundcloud }}
+            <div class="flex items-center space-x-2">
+              {{ with resources.Get "images/icons/soundcloud.svg" | fingerprint }}
+                <img
+                  src="{{ .Permalink }}"
+                  alt="soundcloud"
+                  height="24"
+                  width="24"
+                />
+              {{ end }}
+
+
+              <a
+                href="{{ .Params.soundcloud }}?utm_source=listeningspaces.net&utm_medium=referral"
+              >
+                Soundcloud
+              </a>
+            </div>
+          {{ end }}
+
+          {{ if .Params.mixcloud }}
+            <div class="flex items-center space-x-2">
+              {{ with resources.Get "images/icons/mixcloud.svg" | fingerprint }}
+                <img src="{{ .Permalink }}" alt="mixcloud" width="24" />
+              {{ end }}
+
+
+              <a
+                href="{{ .Params.mixcloud }}?utm_source=listeningspaces.net&utm_medium=referral"
+              >
+                Mixcloud
+              </a>
+            </div>
+          {{ end }}
+
+          {{ if .Params.spotify }}
+            <div class="flex items-center space-x-2">
+              {{ with resources.Get "images/icons/spotify.svg" | fingerprint }}
+                <img src="{{ .Permalink }}" alt="spotify" width="24" />
+              {{ end }}
+
+
+              <a
+                href="{{ .Params.spotify }}?utm_source=listeningspaces.net&utm_medium=referral"
+              >
+                Spotify
+              </a>
+            </div>
+          {{ end }}
+
+          {{ if .Params.youtube }}
+            <div class="flex items-center space-x-2">
+              {{ with resources.Get "images/icons/youtube.svg" | fingerprint }}
+                <img src="{{ .Permalink }}" alt="youtube" width="24" />
+              {{ end }}
+
+
+              <a
+                href="{{ .Params.youtube }}?utm_source=listeningspaces.net&utm_medium=referral"
+              >
+                YouTube
+              </a>
+            </div>
+          {{ end }}
+
 
           <div class="flex items-center space-x-2">
-            {{ with resources.Get "images/map.svg" | fingerprint }}
+            {{ with resources.Get "images/icons/map.svg" | fingerprint }}
               <img src="{{ .RelPermalink }}" alt="map" height="24" width="24" />
             {{ end }}
 
@@ -86,21 +151,23 @@
         </div>
       </div>
 
-      <div class="space-y-2">
-        <h2 class="text-4xl">Facilities</h2>
+      {{ if .Params.tags }}
+        <div class="space-y-2">
+          <h2 class="text-4xl">Facilities</h2>
 
-        <div class="space-y-1">
-          {{ if in .Params.tags "cafe" }}
-            {{ partial "tag.html" (dict "icon" "images/coffee.svg" "label" "Cafe") }}
-          {{ end }}
-          {{ if in .Params.tags "bar" }}
-            {{ partial "tag.html" (dict "icon" "images/martini.svg" "label" "Bar") }}
-          {{ end }}
-          {{ if in .Params.tags "restaurant" }}
-            {{ partial "tag.html" (dict "icon" "images/utensils.svg" "label" "Restaurant") }}
-          {{ end }}
+          <div class="space-y-1">
+            {{ if in .Params.tags "cafe" }}
+              {{ partial "tag.html" (dict "icon" "images/icons/coffee.svg" "label" "Cafe") }}
+            {{ end }}
+            {{ if in .Params.tags "bar" }}
+              {{ partial "tag.html" (dict "icon" "images/icons/martini.svg" "label" "Bar") }}
+            {{ end }}
+            {{ if in .Params.tags "restaurant" }}
+              {{ partial "tag.html" (dict "icon" "images/icons/utensils.svg" "label" "Restaurant") }}
+            {{ end }}
+          </div>
         </div>
-      </div>
+      {{ end }}
     </div>
   </div>
 {{ end }}

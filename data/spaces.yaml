@@ -9,6 +9,7 @@
                 - name: Bar Shiru
                   url: https://www.barshiru.com/
                   map: https://maps.app.goo.gl/RFgNRBLiWe9WfBoC9
+                  instagram: https://www.instagram.com/barshiruoakland
                   image: bar-shiru.jpg
                   tags:
                     - bar
@@ -42,6 +43,7 @@
                 - name: Goldline
                   url: https://www.goldlinebar.com/
                   map: https://maps.app.goo.gl/n2LW9MYiSDC5qG636
+                  instagram: https://www.instagram.com/goldlinebar/
                   tags:
                     - bar
 
@@ -50,6 +52,7 @@
                 - name: Part Time Lover
                   url: http://parttimeloverhifi.com/
                   map: https://maps.app.goo.gl/fGz36USovMofYENS8
+                  instagram: https://www.instagram.com/parttimelover.hifi/
                   tags:
                     - bar
 
@@ -60,14 +63,44 @@
                 - name: Dante's HiFi
                   url: http://danteshifi.com/
                   map: https://maps.app.goo.gl/v6yGm5wRmWZuYcbi7
+                  instagram: https://www.instagram.com/danteshifi
                   tags:
                     - bar
+                  about: |-
+                    From Dante's HiFi's website:
+
+                    > DANTE’S HIFI+ IS THE FIRST VINYL LISTENING BAR AND VENUE
+                    DEDICATED TO THE ANALOG AUDIOPHILE MUSIC CULTURE IN WYNWOOD.
+                    AN INTIMATE AND SOULFUL SPACE FOR THE DISCERNING MUSIC
+                    ENTHUSIAST, GUESTS CAN EXPECT AUTHENTIC, HIFI MUSICAL
+                    EXPERIENCES FROM GLOBALLY RECOGNIZED ARTISTS IN A LOFI,
+                    COMFORTABLE SETTING.
+                    FROM DANTE’S STATE-OF-THE-ART SOUND
+                    SYSTEM, AUDIOPHILES WILL APPRECIATE AN EXTENSIVE LIBRARY OF
+                    VINYL RECORDS FROM RESIDENT MUSIC DIRECTOR RICH MEDINA’S
+                    PERSONAL COLLECTION.
+                    FOR THE MUSICALLY CURIOUS AND
+                    MELOMANIACS ALIKE, DANTE’S HIFI+ BRINGS SINCERE VIBES AND A
+                    LEVEL OF SOPHISTICATION TO THE MUSIC SCENE IN MIAMI THAT
+                    HASN’T EXISTED BEFORE.
 
                 - name: Jolene Sound Room
+                  path: jolene-sound-room-miami
                   url: https://v4-jolenesoundroom.getbento.com/Miami/
                   map: https://maps.app.goo.gl/pj5WDQPRZfWBBLjT7
+                  instagram: https://www.instagram.com/jolenesoundroom/
                   tags:
                     - bar
+                  about: |-
+                    From Jolene Sound Room's website:
+
+                    > JOLENE SOUND ROOM MIAMI IS A ONE-OF-A-KIND SOUND SPACE IN
+                    THE BASEMENT OF THE ICONIC ART DECO BUILDING, JULIA & HENRY
+                    LOCATED ON FLAGER & 2ND STREET IN DOWNTOWN MIAMI. THE SPACE,
+                    BELIEVED TO BE AL CAPONE'S ILLEGAL LIQUOR STOCK TUNNEL, IS
+                    AN INTIMATE ROOM INSPIRED BY MIDCENTURY RECORDING STUDIOS &
+                    70'S LEISURE LIFESTYLE THAT CELEBRATES LOCAL MUSIC CULTURE
+                    PROGRAMMED BY MIAMI NATIVE, DJ RAY.
 
         - name: Arizona
           cities:
@@ -76,9 +109,27 @@
                 - name: Central Records
                   url: https://centralrecords824.com/
                   map: https://maps.app.goo.gl/Y3MTq1iLg9ycVtucA
+                  instagram: https://www.instagram.com/central.records/
                   tags:
                     - bar
                     - restaurant
+                  about: |-
+                    From Central Records' website:
+
+                    > Central Records is a modern kissa-inspired cafe and
+                    electric sound lounge located in the Roosevelt Row Arts
+                    District of Downtown Phoenix, between 1st Ave and Central
+                    Ave.
+                    >
+                    > Our humble kitchenette serves tasty late-night food on
+                    Friday and Saturday nights for a program we call DINNER
+                    BREAKS, which features our Bar Menu accompanied by live DJ
+                    sets to enhance the vibe. And on Thursday nights, we feature
+                    a special dinner menu and a Jazz Vinyl DJ set that runs from
+                    7pm to 10pm.
+                    >
+                    > We're open 5 days a week, with Happy Hour daily, and we
+                    host Open Decks DJ sessions on Tuesday nights.
 
         - name: Kansas
           cities:
@@ -87,6 +138,22 @@
                 - name: The Listyning Room
                   url: https://www.centerforrecordedmusic.org/listyningroom
                   map: https://maps.app.goo.gl/bKNfyo1cm3y8rNmK9
+                  instagram: https://www.instagram.com/center4recordedmusic
+                  image: listyning-room.webp
+                  about: |-
+                    From The Listyning Room's website:
+
+                    > The Listyning Room allows us to showcase some the best
+                    recordings from our collection, demonstrate a variety of new
+                    and vintage stereo equipment, and offer recordings and music
+                    related products for sale.
+                    >
+                    > Listening events open to the general public, with members
+                    receiving early access and/or exclusive events.
+                    >
+                    > A wide selection of beverages available during most
+                    sessions, and fabulous restaurants nearby from which to
+                    order food.
 
         - name: Texas
           cities:
@@ -95,9 +162,25 @@
                 - name: Equipment Room
                   url: https://equipmentroom.com/
                   map: https://maps.app.goo.gl/qKmyoWW2rVmz4SzRA
+                  instagram: https://www.instagram.com/equipmentroomaustin
                   tags:
                     - bar
                     - restaurant
+                  about: |-
+                    From Equipment Room's website:
+
+                    > We look forward to welcoming you to our private basement
+                    hideaway – in the old equipment room beneath the Hotel
+                    Magdalena on Music Lane.
+                    Here you will find an intimate space that houses one of
+                    Austin’s most special record collections played on custom
+                    vintage hi-fi equipment. Blending Japanese Jazz Kissa
+                    culture with our Texas take – Equipment Room feels like a
+                    wholly new, yet very familiar experience.
+                    It’s the place we’ve been dreaming of for quite some time.
+                    So whether you come to listen to our collection, or for the
+                    cocktails, food and conversation – all are welcome at
+                    Equipment Room.
 
         - name: New York
           cities:
@@ -106,64 +189,176 @@
                 - name: Public Records
                   url: http://publicrecords.nyc/
                   map: https://maps.app.goo.gl/aNVtH8kJboqLoj177
+                  instagram: https://www.instagram.com/publicrecordsnyc/
+                  image: public-records-upstairs.jpg
                   tags:
                     - cafe
                     - bar
                     - restaurant
+                  about: |-
+                    From Public Records' website:
+
+                    > PUBLIC RECORDS is a multi-function, ever-evolving space
+                    and platform headquartered within the historic ASPCA
+                    building in Gowanus, Brooklyn.
+                    >
+                    > Born in 2017, the organization houses diverse sonic and
+                    cultural programming, imaginative food + beverage offerings,
+                    and innovative design explorations.
+                    > The space counts among its community a wide network of
+                    musicians, producers, artists, designers, architects, chefs,
+                    and mixologists.
+                    > 233 Butler St, the campus itself, has grown to include
+                    five concepts: The Atrium, a vegan restaurant and music
+                    lounge; The Sound Room, a sonically-immersive live and club
+                    space; Cafe Public, an all-day cafe and record store;
+                    UPSTAIRS, an intimate listening lounge and cocktail bar; and
+                    The Nursery, an open-air plant nursery x event space.
+                    >
+                    > Above all, PUBLIC RECORDS is committed to continuously
+                    exploring intersections between sound, design, hospitality,
+                    and ecology, and championing diverse art forms and
+                    practices.
 
                 - name: Jolene Sound Room
+                  path: jolene-sound-room-nyc
                   url: https://v4-jolenesoundroom.getbento.com/Brooklyn/
                   map: https://maps.app.goo.gl/wkpaMxe52BY1QEkv7
+                  instagram: https://www.instagram.com/jolenesoundroom.bk/
                   tags:
                     - bar
+                  about: |-
+                    From Jolene Sound Room's website:
+
+                    > JOLENE SOUND ROOM BROOKLYN IS A ONE-OF-A-KIND SOUND SPACE
+                    AT THE NEW MOXY WILLIAMSBURG.
+                    THE RETRO-THEMED HIGH ENERGY ROOM CELEBRATES LOCAL MUSIC
+                    CULTURE AND DRAWS TOP TALENT FROM BROOKLYN’S THRIVING
+                    NIGHTLIFE SCENE, AS WELL AS THE GLOBAL DANCE MUSIC CIRCUIT,
+                    SHOWCASING THE BEST OF DISCO, HOUSE, AND TECHNO.
+                    >
+                    > RESERVE ADVANCE TICKETS TO SECURE YOUR ENTRANCE.
+                    > LIMITED TICKETS AVAILABLE AT THE DOOR.
 
                 - name: Tokyo Record Bar
+                  image: tokyo-record-bar.jpg
                   url: https://tokyorecordbar.com/
                   map: https://maps.app.goo.gl/viQoHEi2fCtRNb7i9
+                  instagram: https://www.instagram.com/tokyorecordbar/
                   tags:
                     - bar
                     - restaurant
+                  about: |-
+                    From Tokyo Record Bar's website:
+
+                    > Welcome to Tokyo Record Bar & Tokyo Listening Room.
+                    >
+                    > AN HOMAGE TO THE JEWEL BOXES OF VINYL IN JAPAN
+                    >
+                    > AN UNDERGROUND LISTENING ROOM DEDICATED TO QUALITY &
+                    OBSESSION THROUGH MUSIC, FOOD & BOOZE.
 
                 - name: Eavesdrop
                   url: https://www.eavesdrop.nyc/
                   map: https://maps.app.goo.gl/bUNTfMUEe8KQJW2T9
+                  instagram: https://www.instagram.com/eavesdrop.nyc
+                  soundcloud: https://soundcloud.com/eavesdrop-nyc
+                  image: eavesdrop.webp
                   tags:
                     - bar
                     - restaurant
+                  about: |-
+                    From Eavesdrop's website:
+
+                    > Eavesdrop serves up craft cocktails, natural wines,
+                    small plates, and music in a space designed for sound.
+                    Our mission is to bring Brooklyn’s community of listeners,
+                    artists, and curators together in a cozy neighborhood
+                    environment that lends itself more to listening than to
+                    dancing.
+                    >
+                    > We believe that with the right DJ, sound system, and
+                    atmosphere, music of all kinds can be celebrated and
+                    experienced anew.
 
                 - name: Honeycomb Hi-Fi Lounge
                   url: https://honeycombk.com/
                   map: https://maps.app.goo.gl/YYsbBazXsLnF4zmL8
+                  instagram: https://www.instagram.com/thehoneycomb_bk
                   tags:
                     - bar
 
                 - name: The Last Call
                   url: https://www.thelastcallbk.com/
                   map: https://maps.app.goo.gl/HXLQjp5K6yEJy9B88
+                  instagram: https://www.instagram.com/thelastcallbrooklyn/
                   tags:
                     - cafe
                     - bar
                     - restaurant
 
                 - name: Café Kitsuné
+                  path: cafe-kitsune
                   url: https://maisonkitsune.com/mk/us/the-bar-at-cafe-kitsune/
                   map: https://maps.app.goo.gl/FyW4W4K1AoXeRsTd9
+                  instagram: https://www.instagram.com/cafekitsune/
+                  image: cafe-kitsune.webp
                   tags:
                     - bar
+                  about: |-
+                    From Café Kitsuné's website:
+
+                    > Discover our artist residencies every month at « The Bar
+                    », our first Hi-Fi cocktail bar located at Café Kitsuné
+                    Boerum Hill!
+                    Join us every Friday from 9pm to kick off your weekend and
+                    dance to artists’ sets curated by our favorite artists.
+                    No RSVP needed, just come as you are!
 
                 - name: OJAS Listening Room at USM
                   url: https://us.usm.com/blogs/journal-home/devon-turnbull-ojas-listening-room
                   map: https://maps.app.goo.gl/JSuQrbe2uMSD7yJeA
+                  image: usm-ojas.jpeg
+                  about: |-
+                    This is a furniture showroom with a semi-permanent
+                    installation from
+                    [Devon Turnbull / OJAS](https://ojas.nyc/?utm-source=listeningspaces.net).
+
+                    From the USM website:
+
+                    > The design of the Ojas Listening Room at the USM NY
+                    Showroom integrates Turnbull’s brutalist audio systems with
+                    USM case goods, seating, and other furniture, as well as
+                    Kvadrat Acoustics’ Soft Cell panels. Visitors to USM will
+                    experience a calming environment in which to contemplate
+                    music, liberated from the disruption of outside noise.
+                    To help realize this ambitious project, Turnbull tapped
+                    expert acoustician Ethan Bourdeau and creative agency
+                    ICNCLST.
+                    The space is now open to the public with immersive,
+                    one-of-a-kind listening sessions. As part of the
+                    collaboration between Ojas and USM, Turnbull will offer a
+                    curated selection of products from the likes of Denon,
+                    Ortofon, Western Electric, Sun Audio, MJ Magazine, Stereo
+                    Sound, and others.
 
         - name: Washington
           cities:
             - name: Seattile
               spaces:
                 - name: Shibuya
+                  image: shibuya.webp
                   url: https://www.shibuyahifi.com/schedule-hifi
                   map: https://maps.app.goo.gl/dxoZzQfLPWUJRrv79
+                  instagram: https://www.instagram.com/shibuyahifi
                   tags:
                     - bar
+                  about: |-
+                    From Shibuya's website:
+
+                    > Our goal at Shibuya HiFi is simple: To place our guests in
+                    the midst of a high-fidelity sound experience that offers a
+                    reset from the static and the noise of the modern world.
 
         - name: Colorado
           cities:
@@ -172,8 +367,21 @@
                 - name: ESP
                   url: https://esphifi.co/
                   map: https://maps.app.goo.gl/KT7VqMBwxSwZ2CXM7
+                  instagram: https://www.instagram.com/esp.hifi/
+                  image: esp.jpg
                   tags:
                     - bar
+                  about: |-
+                    From ESP's website:
+
+                    > ESP is heavily influenced by the century-long Japanese
+                    kissa where listening to music is the core identity.
+                    Traditionally, you find cafés playing classical or bars
+                    playing jazz on a high fidelity sound system all-analog.
+                    Different forms have taken shape as well.
+                    We can’t say enough about these places and owners, owing
+                    much to them and the music/musicians that inspire these
+                    sanctuaries of sound.
 
     - name: Canada
       cities:
@@ -182,6 +390,8 @@
             - name: The Little Jerry
               url: http://www.thelittlejerry.com/
               map: https://maps.app.goo.gl/tzJxKrKEKpThpfaD8
+              instagram: https://www.instagram.com/littlejerryto/
+              soundcloud: https://soundcloud.com/smalljerry
               tags:
                 - bar
                 - restaurant
@@ -203,8 +413,10 @@
         - name: Mexico City
           spaces:
             - name: Tokyo Music Bar
+              image: tokyo-music-bar-mexico-city.jpg
               url: https://edokobayashi.com/index.php/tokyo-music-bar/
               map: https://maps.app.goo.gl/ob2L4ngwWKKuZ9bA9
+              instagram: https://www.instagram.com/tokyomusicbar/
               tags:
                 - bar
 
@@ -215,20 +427,40 @@
         - name: Dublin
           spaces:
             - name: Fidelity
+              image: fidelity.jpg
               url: https://www.fidelitybar.ie
               map: https://maps.app.goo.gl/2bKzHJL1aNRfnnnt9
+              instagram: https://www.instagram.com/fidelitydublin/
               tags:
                 - bar
+                - restaurant
+              about: |-
+                From Fidelity's website:
+
+                > Fidelity Bar is a collaboration between two good pals; The Big
+                Romance and Whiplash, combining expertise to create a unique
+                venue which features a state-of-the-art sound system and
+                comprehensive acoustic treatment to deliver an exceptional
+                auditory experience.
 
     - name: Portugal
       cities:
         - name: Lisbon
           spaces:
             - name: The Kissaten
+              image: kissaten.webp
               url: https://www.thekissaten.pt/
               map: https://maps.app.goo.gl/PrH3fGAuDmCweuvE9
+              instagram: https://www.instagram.com/thekissaten/
               tags:
                 - bar
+              about: |-
+                From the Kissaten's website:
+
+                > A new high-end listening bar from London’s Spiritland team.
+                >
+                > Pick an album from the library and enjoy a whisky from
+                Lisbon’s largest collection overseen by Dave Broom.
 
     - name: United Kingdom
       cities:
@@ -237,34 +469,68 @@
             - name: Brilliant Corners
               url: http://brilliantcornerslondon.co.uk/
               map: https://maps.app.goo.gl/myrNQGg6VvkKeWkt8
+              instagram: https://www.instagram.com/brilliant_cnrs/
+              mixcloud: https://www.mixcloud.com/BrilliantCorners/
               tags:
                 - bar
                 - restaurant
 
             - name: Spiritland
+              image: spiritland.jpg
               url: https://spiritland.com/location/spiritland-kings-cross/
               map: https://maps.app.goo.gl/FKVbbbHP7tS8JKt39
+              instagram: https://www.instagram.com/spiritland/
               tags:
                 - cafe
                 - bar
                 - restaurant
+              about: |-
+                From Spiritland's website:
+
+                > Spiritland is a series of spaces in London for music lovers,
+                incorporating a café, bar and a radio studio all built around an
+                outstanding sound system and music policy.
+                >
+                > We explore a wide range of musical genres and eras in depth,
+                including jazz, soul, rock, funk, country & western, reggae,
+                ambient, pop, indie, disco, electronic music and more.
 
     - name: Switzerland
       cities:
         - name: Zurich
           spaces:
             - name: Stereo Bar
+              image: stereo-bar.jpg
               url: https://www.stereo-bar.ch/
               map: https://maps.app.goo.gl/uXZNqoEjqMGnGRng6
+              instagram: https://www.instagram.com/stereozurich/
               tags:
                 - bar
+              about: |-
+                From Stereo's website:
+
+                > Located on Brauerstrasse near Langstrasse, Stereo is a
+                retro-style bar that has quickly become a hotspot for music
+                lovers and night owls.
+                Known for its carefully curated music, played on the
+                unparalleled Klipsch sound system with the Varia RDM40 rotary
+                mixer, and an impressive selection of drinks at our cocktail bar
+                – featuring draft cocktails, Negronis, and Moscow Mules – Stereo
+                offers a unique experience.
+                Here, local and international sounds blend into a unique
+                symphony that has even been celebrated by the New York Times.
+                Whether for a relaxed evening with friends or a night of
+                dancing, Stereo promises unforgettable moments in the vibrant
+                heart of Zurich.
 
     - name: France
       cities:
         - name: Paris
           spaces:
             - name: Fréquence
+              path: frequence
               instagram: https://www.instagram.com/frequenceparis/
+              soundcloud: https://soundcloud.com/frequencebarparis
               map: https://maps.app.goo.gl/1vFUQ2zW7Wx99tjH7
               tags:
                 - bar
@@ -277,26 +543,34 @@
             - name: Lonely Bar Hi-Fi
               url: https://www.thelonelybar.com/
               map: https://maps.app.goo.gl/gu96JGsmMymPrZr69
+              instagram: https://www.instagram.com/lonely.bcn/
               tags:
                 - bar
 
             - name: Oblicuo Hi-Fi Bar
               url: http://www.oblicuohifibar.com/
               map: https://maps.app.goo.gl/P2AGTRXRFM2cqKHC6
+              instagram: https://www.instagram.com/oblicuohifibar/
               tags:
                 - bar
 
             - name: Curtis Audiophile Cafe
               url: https://curtisaudiocafe.com/
               map: https://maps.app.goo.gl/JQXgSWiCiB5s6mjYA
+              instagram: https://www.instagram.com/curtisaudiocafe/
+              mixcloud: https://www.mixcloud.com/Curtisaudiocafe/
+              spotify: https://open.spotify.com/playlist/7dy8m7ERydQTuqTL9oSzB9
               tags:
                 - bar
+                - restaurant
 
         - name: Madrid
           spaces:
             - name: Tempo Club
+              image: tempo.jpg
               url: https://www.tempoclub.es/
               map: https://maps.app.goo.gl/PpVMNPptPQjRCLLKA
+              instagram: https://www.instagram.com/tempoaudiophileclub/
               tags:
                 - bar
                 - restaurant
@@ -308,25 +582,69 @@
             - name: Dussmann Bookshop
               url: https://www.kulturkaufhaus.de/en/start
               map: https://maps.app.goo.gl/AmMoapxtgcxh2imm9
+              about: |-
+                From James:
+
+                > This is a book store that I visited while in Berlin in 2023.
+                As part of their music section downstairs, they have quite a
+                nice listening room.
+                >
+                > It's worth a visit if you're in the area!
 
             - name: Rhinoçéros
+              path: rhinoceros
+              image: rhinoceros.jpg
               url: https://rhinoceros-berlin.com/
               map: https://maps.app.goo.gl/AE3LHgfjgoLucgYv8
+              instagram: https://www.instagram.com/rhinoceros.berlin
               tags:
                 - bar
                 - restaurant
+              about: |-
+                From the Rhinoçéros website:
+
+                > Welcome to Rhinoçéros, our small Jazzbar, that was built
+                around a beautiful vintage soundsystem and an always growing
+                record collection. We play vinyl only.
+                But if the jazz we like isn’t on Vinyl, we may play some CD’s
+                too!
 
             - name: Unkompress
+              image: unkompress.jpeg
+              url: https://unkompress.berlin/
               instagram: https://www.instagram.com/unkompress/
               map: https://maps.app.goo.gl/ZfvbmpdVBJLtR2HS8
+              youtube: https://www.youtube.com/@unkompress
+              soundcloud: https://soundcloud.com/unkompress
+              mixcloud: https://www.mixcloud.com/unkompress/
               tags:
                 - bar
+                - cafe
+              about: |-
+                From the Unkompress website:
+
+                > More than just a bar or cafe, we’re an intimate social space &
+                platform for music, culture, and gathering.
+                We’ve taken a melting pot of ideas from our favorite things from
+                various cultures and plugged them into a bar concept.
+                Unkompress is a place to enjoy eclectic music with lovely analog
+                audio and natural wine, craft liquor, beer, and coffee.
 
             - name: Bar Neiro
+              image: bar-neiro.jpg
               url: https://barneiro.com/
               map: https://maps.app.goo.gl/XAvWw7SfJVx1YBq78
+              instagram: https://www.instagram.com/bar.neiro/
               tags:
                 - bar
+              about: |-
+                From Bar Neiro's website:
+
+                > Bar Neiro is a listening bar inspired by Japan’s jazz-kissas.
+                All music is played from vinyl, and each LP is played front to
+                back.
+                Our sound system is custom built with premium vintage hi fi
+                components.
 
 - name: Asia
   countries:
@@ -344,6 +662,7 @@
         - name: Bangkok
           spaces:
             - name: Clutch
+              image: clutch.jpg
               instagram: https://www.instagram.com/clutchbkk
               map: https://maps.app.goo.gl/bw1nSxtEVZgW2ADT6
               tags:
@@ -363,11 +682,37 @@
         - name: Brunswick
           spaces:
             - name: Waxflower
+              image: waxflower.jpg
               url: http://www.waxflowerbar.com.au/
               map: https://maps.app.goo.gl/N3CLV4xeZY9SZU2D8
+              instagram: https://www.instagram.com/waxflowerbar/
               tags:
                 - bar
                 - restaurant
+              about: |-
+                From Waxflower's website:
+
+                > We’re a wine bar with great food, local beers on tap, and
+                carefully selected wines where a minimal intervention or natural
+                winemaking approach has been taken.
+                >
+                > Equally, we’re a soundbar/audiophile listening space that adds
+                an element rarely considered important in our local
+                establishments.
+                We’re not the first to build a bar with a hot sound system, and
+                we’ve taken lots of inspiration from spaces we love in Tokyo and
+                London.
+                > (arigato/thanks)
+                >
+                > To pull all of this together we started by building our
+                foundations on a warm and spacious sound experience that doesn’t
+                detract from a cosy, social and conversational bar ambiance.
+                >
+                > In simple terms, this means a bespoke sound system and room
+                acoustic treatment.
+                >
+                > **Unpretentious summary**: Just doing cool things in a relaxed and
+                thoughtfully designed space.
 
 - name: Middle East
   countries:
@@ -376,8 +721,10 @@
         - name: Tel Aviv
           spaces:
             - name: Romano
+              image: romano.png
               url: https://ontopo.co.il/romano
               map: https://maps.app.goo.gl/p897LCAvqhzdeF5X8
+              instagram: https://www.instagram.com/romanotelaviv/?hl=en
               tags:
                 - bar
                 - restaurant

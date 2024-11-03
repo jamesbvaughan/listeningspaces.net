@@ -7,8 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "hugo server",
-    "build": "hugo --minify",
+    "dev": "hugo server --printPathWarnings",
+    "build": "hugo --minify --printPathWarnings",
     "format": "prettier --write .",
     "lint-data": "ajv -s data/spaces.schema.json -d data/spaces.yaml -c ajv-formats"
   },

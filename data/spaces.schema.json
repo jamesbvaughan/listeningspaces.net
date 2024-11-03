@@ -78,6 +78,7 @@
       "additionalProperties": false,
       "properties": {
         "name": { "type": "string" },
+        "path": { "type": "string" },
         "url": { "type": "string", "format": "uri" },
         "map": { "type": "string", "format": "uri" },
         "instagram": { "type": "string", "format": "uri" },

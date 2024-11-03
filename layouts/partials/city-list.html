@@ -7,13 +7,13 @@
         {{ range sort .spaces "name" }}
           <li class="text-xl font-light text-nowrap space-y-1">
             <div class="flex items-center space-x-2">
-              <a href="/{{ .name | urlize }}">{{ .name }}</a>
+              <a href="/{{ default .name .path | urlize }}">{{ .name }}</a>
               <a
                 href="{{ .map }}"
                 class="w-6 opacity-50 hover:opacity-70"
                 aria-label="Google Maps link for {{ .name }}"
               >
-                {{ with resources.Get "images/map.svg" | resources.Fingerprint }}
+                {{ with resources.Get "images/icons/map.svg" | resources.Fingerprint }}
                   <img src="{{ .RelPermalink }}" alt="Map" />
                 {{ end }}
               </a>
@@ -21,13 +21,13 @@
 
             <div class="flex items-center space-x-2">
               {{ if in .tags "cafe" }}
-                {{ partial "space-tag.html" (dict "icon" "images/coffee.svg" "name" "Cafe") }}
+                {{ partial "space-tag.html" (dict "icon" "images/icons/coffee.svg" "name" "Cafe") }}
               {{ end }}
               {{ if in .tags "bar" }}
-                {{ partial "space-tag.html" (dict "icon" "images/martini.svg" "name" "Bar") }}
+                {{ partial "space-tag.html" (dict "icon" "images/icons/martini.svg" "name" "Bar") }}
               {{ end }}
               {{ if in .tags "restaurant" }}
-                {{ partial "space-tag.html" (dict "icon" "images/utensils.svg" "name" "Restaurant") }}
+                {{ partial "space-tag.html" (dict "icon" "images/icons/utensils.svg" "name" "Restaurant") }}
               {{ end }}
             </div>
           </li>
