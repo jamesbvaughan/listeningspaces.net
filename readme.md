@@ -2,6 +2,8 @@
 
 ![](assets/images/og.png)
 
+[![CI](actions/workflows/ci.yml/badge.svg)](actions/workflows/ci.yml)
+
 This is a directory of hi-fi listening spaces. Check it out at [listeningspaces.net](https://listeningspaces.net).
 
 ## Contributing
