@@ -1,0 +1,6 @@
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Prevent *.pages.dev pages from being indexed by search engines
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
