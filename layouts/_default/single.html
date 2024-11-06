@@ -188,7 +188,7 @@
 {{ define "partials/tag.html" }}
   <li class="flex items-center space-x-2">
     {{ $label := .label }}
-    {{ with resources.Get .icon }}
+    {{ with resources.Get .icon | fingerprint }}
       <img
         src="{{ .Permalink }}"
         alt=""
