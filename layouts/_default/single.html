@@ -1,4 +1,40 @@
 {{ define "main" }}
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="sr-only">
+    <li
+      itemprop="itemListElement"
+      itemscope
+      itemtype="https://schema.org/ListItem"
+    >
+      <span itemprop="name">Listening Spaces</span>
+      <meta itemprop="position" content="1" />
+    </li>
+    ›
+    <li
+      itemprop="itemListElement"
+      itemscope
+      itemtype="https://schema.org/ListItem"
+    >
+      <a
+        itemscope
+        itemtype="https://schema.org/WebPage"
+        itemprop="item"
+        href="/#{{ .Params.city | anchorize }}"
+      >
+        <span itemprop="name">{{ .Params.city }}</span></a
+      >
+      <meta itemprop="position" content="2" />
+    </li>
+    ›
+    <li
+      itemprop="itemListElement"
+      itemscope
+      itemtype="https://schema.org/ListItem"
+    >
+      <span itemprop="name">{{ .Params.name }}</span>
+      <meta itemprop="position" content="3" />
+    </li>
+  </ol>
+
   <div itemscope itemtype="https://schema.org/BarOrPub">
     <h1 class="text-6xl" itemprop="name">{{ .Params.name }}</h1>
 
