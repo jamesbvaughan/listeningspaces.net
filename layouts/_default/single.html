@@ -48,17 +48,25 @@
     <h1 class="text-6xl" itemprop="name">{{ .Params.name }}</h1>
 
     <p itemprop="location">
-      <a href="/#{{ .Params.city | anchorize }}" class="no-underline"
-        >{{ .Params.city }}</a
-      >,
-      {{ if .Params.state }}
-        <a href="/#{{ .Params.state | anchorize }}" class="no-underline"
-          >{{ .Params.state }}</a
-        >,{{ " " }}
-      {{ end }}
-      <a href="/#{{ .Params.country | anchorize }}" class="no-underline"
-        >{{ .Params.country }}</a
+      <span
+        itemprop="address"
+        itemscope
+        itemtype="https://schema.org/PostalAddress"
       >
+        <a href="/#{{ .Params.city | anchorize }}" class="no-underline">
+          <span itemprop="addressLocality">{{ .Params.city }}</span></a
+        >,
+        {{ if .Params.state }}
+          <a href="/#{{ .Params.state | anchorize }}" class="no-underline">
+            <span itemprop="addressRegion"> {{ .Params.state }}</span></a
+          >,{{ " " }}
+        {{ end }}
+        <a href="/#{{ .Params.country | anchorize }}" class="no-underline">
+          <span itemprop="addressCountry">
+            {{ .Params.country }}
+          </span>
+        </a>
+      </span>
     </p>
 
     {{ if .Params.image }}
