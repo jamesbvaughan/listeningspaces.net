@@ -16,13 +16,7 @@
       <meta property="og:image" content="{{ .Permalink }}" />
     {{ end }}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ .Title }}" />
-    <meta name="twitter:description" content="{{ .Description }}" />
-    <meta name="twitter:site" content="@jamesontheline" />
-    {{ with resources.Get "images/og.png" | fingerprint }}
-      <meta name="twitter:image" content="{{ .Permalink }}" />
-    {{ end }}
-
+    <meta name="twitter:creator" content="@jamesontheline" />
 
     <meta name="theme-color" content="#f9f5ed" />
     <meta name="color-scheme" content="light" />
