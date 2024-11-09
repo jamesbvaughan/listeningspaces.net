@@ -9,6 +9,7 @@
         itemscope
         itemtype="https://schema.org/WebPage"
         itemprop="item"
+        itemid="/"
         href="/"
       >
         <span itemprop="name">Listening Spaces</span>
@@ -25,6 +26,7 @@
         itemscope
         itemtype="https://schema.org/WebPage"
         itemprop="item"
+        itemid="/#{{ .Params.city | anchorize }}"
         href="/#{{ .Params.city | anchorize }}"
       >
         <span itemprop="name">{{ .Params.city }}</span></a
