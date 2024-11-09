@@ -11,7 +11,7 @@
             itemtype="https://schema.org/Continent"
           >
             <h3
-              class="text-xl uppercase font-semibold text-gray-500"
+              class="text-xl font-semibold text-gray-500 uppercase"
               itemprop="name"
             >
               {{ .name }}
@@ -26,7 +26,7 @@
                 >
                   <h4
                     id="{{ .name | anchorize }}"
-                    class="text-4xl flex items-center space-x-2"
+                    class="flex items-center space-x-2 text-4xl"
                     itemprop="name"
                   >
                     {{ .name }}
@@ -68,7 +68,7 @@
 
   <hr class="my-8" />
 
-  <div class="space-y-4 text-2xl text-justify">
+  <div class="space-y-4 text-justify text-2xl">
     <h2 class="text-6xl">About</h2>
 
     <div itemprop="description" class="space-y-4">
@@ -111,7 +111,7 @@
         <ul class="space-y-1">
           {{ range sort .spaces "name" }}
             <li
-              class="text-xl font-light text-nowrap space-y-1"
+              class="space-y-1 text-xl font-light text-nowrap"
               itemscope
               itemtype="https://schema.org/BarOrPub"
             >
