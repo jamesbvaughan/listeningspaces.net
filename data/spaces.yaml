@@ -245,6 +245,14 @@
                     and ecology, and championing diverse art forms and
                     practices.
 
+                - name: All Blues
+                  image: all-blues.jpg
+                  url: https://allbluesnyc.com
+                  map: https://maps.app.goo.gl/7HZbN66AeH82ARWH6
+                  tags:
+                    - bar
+                    - restaurant
+
                 - name: Jolene Sound Room
                   path: jolene-sound-room-nyc
                   url: https://v4-jolenesoundroom.getbento.com/Brooklyn/
