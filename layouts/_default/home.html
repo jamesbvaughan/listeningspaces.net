@@ -115,8 +115,8 @@
               itemscope
               itemtype="https://schema.org/BarOrPub"
             >
-              <a href="/{{ default .name .path | urlize }}/" itemprop="name url"
-                >{{ .name }}</a
+              <a href="/{{ default .name .path | urlize }}/" itemprop="url"
+                ><span itemprop="name">{{ .name }}</span></a
               >
 
               <div class="flex items-center space-x-2">
