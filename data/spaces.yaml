@@ -127,6 +127,27 @@
                     70'S LEISURE LIFESTYLE THAT CELEBRATES LOCAL MUSIC CULTURE
                     PROGRAMMED BY MIAMI NATIVE, DJ RAY.
 
+        - name: Utah
+          cities:
+            - name: Salt Lake City
+              spaces:
+                - name: Sound Brew
+                  # TODO: Update this map link
+                  # It currently goes to Fountain Records, which is the record
+                  # shop that Sound Brew is opening in.
+                  map: https://maps.app.goo.gl/jPj4FpP8YD5PnMWH7
+                  instagram: https://www.instagram.com/soundbrew/
+                  tags:
+                    - cafe
+                  about: |-
+                    This is a new hifi cafe opening up in Fountain Records.
+
+                    From Sound Brew's Instagram:
+
+                    > Specialty coffee + HiFi
+                    >
+                    > SLC ongaku kissa coming to you soon!
+
         - name: Arizona
           cities:
             - name: Phoenix
