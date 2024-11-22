@@ -523,6 +523,28 @@
                 comprehensive acoustic treatment to deliver an exceptional
                 auditory experience.
 
+    - name: Netherlands
+      cities:
+        - name: Amsterdam
+          spaces:
+            - name: murmur
+              image: murmur.jpg
+              url: https://murmurmur.nl/
+              instagram: https://www.instagram.com/murmur.ams/
+              map: https://maps.app.goo.gl/XnwXT4VZcGnosp2N7
+              tags:
+                - bar
+                - restaurant
+              about: |-
+                From murmur's website:
+
+                > murmur is a bar with hand-built speaker system, nestled in
+                the back of a building in the north of amsterdam. we serve as a
+                community space, celebrating music and experiments beyond the
+                mainstream through long listening sets, concerts, exhibitions
+                and social projects. we also serve delicious lebanese food by
+                nour every weekend.
+
     - name: Portugal
       cities:
         - name: Lisbon
@@ -541,6 +563,19 @@
                 >
                 > Pick an album from the library and enjoy a whisky from
                 Lisbon’s largest collection overseen by Dave Broom.
+            - name: Vago
+              url: https://www.instagram.com/vago.lisboa/
+              image: vago.jpg
+              map: https://maps.app.goo.gl/7rGdV7Tvv2jGHZSg7
+              instagram: https://www.instagram.com/vago.lisboa/
+              bandcamp: https://vagolisboa.bandcamp.com
+              about: |-
+                Image credits: 
+                
+                Francisco Nogueira
+              tags:
+                - bar
+                - restaurant
 
     - name: United Kingdom
       cities:
