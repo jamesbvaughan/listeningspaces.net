@@ -30,16 +30,38 @@
 
             - name: San Francisco
               spaces:
-                - name: Yokai
-                  url: https://yokaisf.com/
-                  instagram: https://www.instagram.com/yokai.sf
-                  map: https://maps.app.goo.gl/fqRNL3YtZSXCtmvK7
+                - name: Harlan Records
+                  image: harlan.webp
+                  url: https://www.harlanrecords.com/
+                  instagram: https://www.instagram.com/harlanrecordssf
+                  map: https://maps.app.goo.gl/74tasXzQFq9wwTZx9
                   tags:
                     - bar
+                - name: Hedge Coffee
+                  image: hedge.png
+                  url: https://www.hedge.coffee/
+                  instagram: https://www.instagram.com/hedgecoffee/
+                  map: https://maps.app.goo.gl/MkGPfKi97fKmfBZz8
+                  spotify: https://open.spotify.com/user/bbjucn5xhjfclpwf5va20wezp
+                  tags:
+                    - cafe
+                - name: side a
+                  image: side-a.png
+                  url: https://www.sideasf.com/
+                  instagram: https://www.instagram.com/sideasf/
+                  map: https://maps.app.goo.gl/ZEnKkmh4pwND8Wuq6
+                  tags:
                     - restaurant
 
             - name: Los Angeles
               spaces:
+                - name: Grá
+                  image: gra.jpg
+                  url: https://xn--gr-nia.com/
+                  map: https://maps.app.goo.gl/V536nCfqJSwK4ifo7
+                  instagram: https://www.instagram.com/gra_la_/
+                  tags:
+                    - restaurant
                 - name: Goldline
                   url: https://www.goldlinebar.com/
                   map: https://maps.app.goo.gl/n2LW9MYiSDC5qG636
