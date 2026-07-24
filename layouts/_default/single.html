@@ -1,257 +1,257 @@
 {{ define "main" }}
-  <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="sr-only">
-    <li
-      itemprop="itemListElement"
-      itemscope
-      itemtype="https://schema.org/ListItem"
-    >
-      <a
-        itemscope
-        itemtype="https://schema.org/WebPage"
-        itemprop="item"
-        itemid="/"
-        href="/"
-      >
-        <span itemprop="name">Listening Spaces</span>
-      </a>
-      <meta itemprop="position" content="1" />
-    </li>
-    ›
-    <li
-      itemprop="itemListElement"
-      itemscope
-      itemtype="https://schema.org/ListItem"
-    >
-      <a
-        itemscope
-        itemtype="https://schema.org/WebPage"
-        itemprop="item"
-        itemid="/#{{ .Params.city | anchorize }}"
-        href="/#{{ .Params.city | anchorize }}"
-      >
-        <span itemprop="name">{{ .Params.city }}</span></a
-      >
-      <meta itemprop="position" content="2" />
-    </li>
-    ›
-    <li
-      itemprop="itemListElement"
-      itemscope
-      itemtype="https://schema.org/ListItem"
-    >
-      <span itemprop="name">{{ .Params.name }}</span>
-      <meta itemprop="position" content="3" />
-    </li>
-  </ol>
+<ol itemscope itemtype="https://schema.org/BreadcrumbList" class="sr-only">
+	<li
+		itemprop="itemListElement"
+		itemscope
+		itemtype="https://schema.org/ListItem"
+	>
+		<a
+			itemscope
+			itemtype="https://schema.org/WebPage"
+			itemprop="item"
+			itemid="/"
+			href="/"
+		>
+			<span itemprop="name">Listening Spaces</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+	›
+	<li
+		itemprop="itemListElement"
+		itemscope
+		itemtype="https://schema.org/ListItem"
+	>
+		<a
+			itemscope
+			itemtype="https://schema.org/WebPage"
+			itemprop="item"
+			itemid="/#{{ .Params.city | anchorize }}"
+			href="/#{{ .Params.city | anchorize }}"
+		>
+			<span itemprop="name">{{ .Params.city }}</span></a
+		>
+		<meta itemprop="position" content="2" />
+	</li>
+	›
+	<li
+		itemprop="itemListElement"
+		itemscope
+		itemtype="https://schema.org/ListItem"
+	>
+		<span itemprop="name">{{ .Params.name }}</span>
+		<meta itemprop="position" content="3" />
+	</li>
+</ol>
 
-  <div itemscope itemtype="https://schema.org/BarOrPub">
-    <h1 class="text-6xl" itemprop="name">{{ .Params.name }}</h1>
+<div itemscope itemtype="https://schema.org/BarOrPub">
+	<h1 class="text-6xl" itemprop="name">{{ .Params.name }}</h1>
 
-    <p itemprop="location">
-      <span
-        itemprop="address"
-        itemscope
-        itemtype="https://schema.org/PostalAddress"
-      >
-        <a href="/#{{ .Params.city | anchorize }}" class="no-underline">
-          <span itemprop="addressLocality">{{ .Params.city }}</span></a
-        >,
-        {{ if .Params.state }}
-          <a href="/#{{ .Params.state | anchorize }}" class="no-underline">
-            <span itemprop="addressRegion"> {{ .Params.state }}</span></a
-          >,{{ " " }}
-        {{ end }}
-        <a href="/#{{ .Params.country | anchorize }}" class="no-underline">
-          <span itemprop="addressCountry">
-            {{ .Params.country }}
-          </span>
-        </a>
-      </span>
-    </p>
+	<p itemprop="location">
+		<span
+			itemprop="address"
+			itemscope
+			itemtype="https://schema.org/PostalAddress"
+		>
+			<a href="/#{{ .Params.city | anchorize }}" class="no-underline">
+				<span itemprop="addressLocality">{{ .Params.city }}</span></a
+			>,
+			{{ if .Params.state }}
+				<a href="/#{{ .Params.state | anchorize }}" class="no-underline">
+					<span itemprop="addressRegion"> {{ .Params.state }}</span></a
+				>,{{ " " }}
+			{{ end }}
+			<a href="/#{{ .Params.country | anchorize }}" class="no-underline">
+				<span itemprop="addressCountry">
+					{{ .Params.country }}
+				</span>
+			</a>
+		</span>
+	</p>
 
-    {{ if .Params.image }}
-      {{ $alt := .Params.name }}
-      {{ $image := path.Join "images/spaces" .Params.image }}
-      {{ with resources.Get $image }}
-        {{ $filters := slice
-          (images.Process "resize 720x")
-          (images.Grayscale)
-          (images.Process "webp")
-        }}
-        {{ with images.Filter $filters . }}
-          <img
-            itemprop="image"
-            src="{{ .Permalink }}"
-            alt="{{ $alt }}"
-            class="mt-2 w-full opacity-70"
-            height="{{ .Height }}"
-            width="{{ .Width }}"
-          />
-        {{ end }}
-      {{ end }}
-    {{ end }}
-
-
-    <div class="mt-4 flex-col space-y-6 sm:flex sm:flex-row sm:space-x-4">
-      {{ if .Params.about }}
-        <div class="space-y-2">
-          <h2 class="text-4xl">About</h2>
-
-          <div itemprop="description">
-            {{ .Params.about | markdownify }}
-          </div>
-        </div>
-      {{ end }}
+	{{ if .Params.image }}
+		{{ $alt := .Params.name }}
+		{{ $image := path.Join "images/spaces" .Params.image }}
+		{{ with resources.Get $image }}
+			{{ $filters := slice
+				(images.Process "resize 720x")
+				(images.Grayscale)
+				(images.Process "webp")
+			}}
+			{{ with images.Filter $filters . }}
+				<img
+					itemprop="image"
+					src="{{ .Permalink }}"
+					alt="{{ $alt }}"
+					class="mt-2 w-full opacity-70"
+					height="{{ .Height }}"
+					width="{{ .Width }}"
+				/>
+			{{ end }}
+		{{ end }}
+	{{ end }}
 
 
-      <div class="shrink-0 space-y-6 sm:w-1/3">
-        <div class="space-y-2">
-          <h2 class="text-4xl">Links</h2>
+	<div class="mt-4 flex-col space-y-6 sm:flex sm:flex-row sm:space-x-4">
+		{{ if .Params.about }}
+			<div class="space-y-2">
+				<h2 class="text-4xl">About</h2>
 
-          <ul class="space-y-1">
-            {{ if .Params.url }}
-              <li class="flex items-center space-x-2">
-                {{ with resources.Get "images/icons/globe.svg" | fingerprint }}
-                  <img src="{{ .Permalink }}" alt="" height="24" width="24" />
-                {{ end }}
-
-
-                <a
-                  href="{{ .Params.url }}?utm_source=listeningspaces.net&utm_medium=referral"
-                  itemprop="sameAs"
-                >
-                  Official website
-                </a>
-              </li>
-            {{ end }}
-
-            {{ if .Params.instagram }}
-              <li class="flex items-center space-x-2">
-                {{ with resources.Get "images/icons/instagram.svg" | fingerprint }}
-                  <img src="{{ .Permalink }}" alt="" height="24" width="24" />
-                {{ end }}
+				<div itemprop="description">
+					{{ .Params.about | markdownify }}
+				</div>
+			</div>
+		{{ end }}
 
 
-                <a
-                  href="{{ .Params.instagram }}?utm_source=listeningspaces.net&utm_medium=referral"
-                >
-                  Instagram
-                </a>
-              </li>
-            {{ end }}
+		<div class="shrink-0 space-y-6 sm:w-1/3">
+			<div class="space-y-2">
+				<h2 class="text-4xl">Links</h2>
 
-            {{ if .Params.soundcloud }}
-              <li class="flex items-center space-x-2">
-                {{ with resources.Get "images/icons/soundcloud.svg" | fingerprint }}
-                  <img src="{{ .Permalink }}" alt="" height="24" width="24" />
-                {{ end }}
+				<ul class="space-y-1">
+					{{ if .Params.url }}
+						<li class="flex items-center space-x-2">
+							{{ with resources.Get "images/icons/globe.svg" | fingerprint }}
+								<img src="{{ .Permalink }}" alt="" height="24" width="24" />
+							{{ end }}
 
 
-                <a
-                  href="{{ .Params.soundcloud }}?utm_source=listeningspaces.net&utm_medium=referral"
-                >
-                  Soundcloud
-                </a>
-              </li>
-            {{ end }}
+							<a
+								href="{{ .Params.url }}?utm_source=listeningspaces.net&utm_medium=referral"
+								itemprop="sameAs"
+							>
+								Official website
+							</a>
+						</li>
+					{{ end }}
 
-            {{ if .Params.mixcloud }}
-              <li class="flex items-center space-x-2">
-                {{ with resources.Get "images/icons/mixcloud.svg" | fingerprint }}
-                  <img src="{{ .Permalink }}" alt="" width="24" />
-                {{ end }}
-
-
-                <a
-                  href="{{ .Params.mixcloud }}?utm_source=listeningspaces.net&utm_medium=referral"
-                >
-                  Mixcloud
-                </a>
-              </li>
-            {{ end }}
-
-            {{ if .Params.spotify }}
-              <li class="flex items-center space-x-2">
-                {{ with resources.Get "images/icons/spotify.svg" | fingerprint }}
-                  <img src="{{ .Permalink }}" alt="" width="24" />
-                {{ end }}
+					{{ if .Params.instagram }}
+						<li class="flex items-center space-x-2">
+							{{ with resources.Get "images/icons/instagram.svg" | fingerprint }}
+								<img src="{{ .Permalink }}" alt="" height="24" width="24" />
+							{{ end }}
 
 
-                <a
-                  href="{{ .Params.spotify }}?utm_source=listeningspaces.net&utm_medium=referral"
-                >
-                  Spotify
-                </a>
-              </li>
-            {{ end }}
+							<a
+								href="{{ .Params.instagram }}?utm_source=listeningspaces.net&utm_medium=referral"
+							>
+								Instagram
+							</a>
+						</li>
+					{{ end }}
 
-            {{ if .Params.youtube }}
-              <li class="flex items-center space-x-2">
-                {{ with resources.Get "images/icons/youtube.svg" | fingerprint }}
-                  <img src="{{ .Permalink }}" alt="" width="24" />
-                {{ end }}
-
-
-                <a
-                  href="{{ .Params.youtube }}?utm_source=listeningspaces.net&utm_medium=referral"
-                >
-                  YouTube
-                </a>
-              </li>
-            {{ end }}
+					{{ if .Params.soundcloud }}
+						<li class="flex items-center space-x-2">
+							{{ with resources.Get "images/icons/soundcloud.svg" | fingerprint }}
+								<img src="{{ .Permalink }}" alt="" height="24" width="24" />
+							{{ end }}
 
 
-            <li class="flex items-center space-x-2">
-              {{ with resources.Get "images/icons/map.svg" | fingerprint }}
-                <img src="{{ .RelPermalink }}" alt="" height="24" width="24" />
-              {{ end }}
+							<a
+								href="{{ .Params.soundcloud }}?utm_source=listeningspaces.net&utm_medium=referral"
+							>
+								Soundcloud
+							</a>
+						</li>
+					{{ end }}
+
+					{{ if .Params.mixcloud }}
+						<li class="flex items-center space-x-2">
+							{{ with resources.Get "images/icons/mixcloud.svg" | fingerprint }}
+								<img src="{{ .Permalink }}" alt="" width="24" />
+							{{ end }}
 
 
-              <a
-                href="{{ .Params.map }}?utm_source=listeningspaces.net&utm_medium=referral"
-              >
-                Open in Google Maps
-              </a>
-            </li>
-          </ul>
-        </div>
+							<a
+								href="{{ .Params.mixcloud }}?utm_source=listeningspaces.net&utm_medium=referral"
+							>
+								Mixcloud
+							</a>
+						</li>
+					{{ end }}
 
-        {{ if .Params.tags }}
-          <div class="space-y-2">
-            <h2 class="text-4xl">Facilities</h2>
+					{{ if .Params.spotify }}
+						<li class="flex items-center space-x-2">
+							{{ with resources.Get "images/icons/spotify.svg" | fingerprint }}
+								<img src="{{ .Permalink }}" alt="" width="24" />
+							{{ end }}
 
-            <ul class="space-y-1">
-              {{ if in .Params.tags "cafe" }}
-                {{ partial "tag.html" (dict "icon" "images/icons/coffee.svg" "label" "Cafe") }}
-              {{ end }}
-              {{ if in .Params.tags "bar" }}
-                {{ partial "tag.html" (dict "icon" "images/icons/martini.svg" "label" "Bar") }}
-              {{ end }}
-              {{ if in .Params.tags "restaurant" }}
-                {{ partial "tag.html" (dict "icon" "images/icons/utensils.svg" "label" "Restaurant") }}
-              {{ end }}
-            </ul>
-          </div>
-        {{ end }}
-      </div>
-    </div>
-  </div>
+
+							<a
+								href="{{ .Params.spotify }}?utm_source=listeningspaces.net&utm_medium=referral"
+							>
+								Spotify
+							</a>
+						</li>
+					{{ end }}
+
+					{{ if .Params.youtube }}
+						<li class="flex items-center space-x-2">
+							{{ with resources.Get "images/icons/youtube.svg" | fingerprint }}
+								<img src="{{ .Permalink }}" alt="" width="24" />
+							{{ end }}
+
+
+							<a
+								href="{{ .Params.youtube }}?utm_source=listeningspaces.net&utm_medium=referral"
+							>
+								YouTube
+							</a>
+						</li>
+					{{ end }}
+
+
+					<li class="flex items-center space-x-2">
+						{{ with resources.Get "images/icons/map.svg" | fingerprint }}
+							<img src="{{ .RelPermalink }}" alt="" height="24" width="24" />
+						{{ end }}
+
+
+						<a
+							href="{{ .Params.map }}?utm_source=listeningspaces.net&utm_medium=referral"
+						>
+							Open in Google Maps
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			{{ if .Params.tags }}
+				<div class="space-y-2">
+					<h2 class="text-4xl">Facilities</h2>
+
+					<ul class="space-y-1">
+						{{ if in .Params.tags "cafe" }}
+							{{ partial "tag.html" (dict "icon" "images/icons/coffee.svg" "label" "Cafe") }}
+						{{ end }}
+						{{ if in .Params.tags "bar" }}
+							{{ partial "tag.html" (dict "icon" "images/icons/martini.svg" "label" "Bar") }}
+						{{ end }}
+						{{ if in .Params.tags "restaurant" }}
+							{{ partial "tag.html" (dict "icon" "images/icons/utensils.svg" "label" "Restaurant") }}
+						{{ end }}
+					</ul>
+				</div>
+			{{ end }}
+		</div>
+	</div>
+</div>
 {{ end }}
 
 {{ define "partials/tag.html" }}
-  <li class="flex items-center space-x-2">
-    {{ $label := .label }}
-    {{ with resources.Get .icon | fingerprint }}
-      <img
-        src="{{ .Permalink }}"
-        alt=""
-        class="opacity-70"
-        height="24"
-        width="24"
-      />
-    {{ end }}
+<li class="flex items-center space-x-2">
+	{{ $label := .label }}
+	{{ with resources.Get .icon | fingerprint }}
+		<img
+			src="{{ .Permalink }}"
+			alt=""
+			class="opacity-70"
+			height="24"
+			width="24"
+		/>
+	{{ end }}
 
 
-    <div>{{ .label }}</div>
-  </li>
+	<div>{{ .label }}</div>
+</li>
 {{ end }}

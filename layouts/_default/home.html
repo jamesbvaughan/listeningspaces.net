@@ -1,153 +1,153 @@
 {{ define "main" }}
-  <div>
-    <div class="space-y-8">
-      <h2 class="sr-only">Spaces</h2>
+<div>
+	<div class="space-y-8">
+		<h2 class="sr-only">Spaces</h2>
 
-      <div class="space-y-14">
-        {{ range .Site.Data.spaces }}
-          <div
-            class="space-y-2"
-            itemscope
-            itemtype="https://schema.org/Continent"
-          >
-            <h3
-              class="text-xl font-semibold text-gray-500 uppercase"
-              itemprop="name"
-            >
-              {{ .name }}
-            </h3>
+		<div class="space-y-14">
+			{{ range hugo.Data.spaces }}
+				<div
+					class="space-y-2"
+					itemscope
+					itemtype="https://schema.org/Continent"
+				>
+					<h3
+						class="text-xl font-semibold text-gray-500 uppercase"
+						itemprop="name"
+					>
+						{{ .name }}
+					</h3>
 
-            <div class="space-y-10">
-              {{ range .countries }}
-                <div
-                  class="space-y-4"
-                  itemscope
-                  itemtype="https://schema.org/Country"
-                >
-                  <h4
-                    id="{{ .name | anchorize }}"
-                    class="flex items-center space-x-2 text-4xl"
-                    itemprop="name"
-                  >
-                    {{ .name }}
-                  </h4>
+					<div class="space-y-10">
+						{{ range .countries }}
+							<div
+								class="space-y-4"
+								itemscope
+								itemtype="https://schema.org/Country"
+							>
+								<h4
+									id="{{ .name | anchorize }}"
+									class="flex items-center space-x-2 text-4xl"
+									itemprop="name"
+								>
+									{{ .name }}
+								</h4>
 
-                  <!-- For the US, include the state level -->
-                  {{ if eq .name "United States of America" }}
-                    <div class="space-y-8">
-                      {{ range sort .states "name" }}
-                        <div
-                          class="space-y-2"
-                          itemscope
-                          itemtype="https://schema.org/State"
-                        >
-                          <h5
-                            class="text-3xl"
-                            itemprop="name"
-                            id="{{ .name | anchorize }}"
-                          >
-                            {{ .name }}
-                          </h5>
-                          {{ partial "city-list.html" . }}
-                        </div>
-                      {{ end }}
-                    </div>
-                  {{ else }}
-                    <!-- For other countries, include cities directly -->
-                    <h5 class="sr-only">All of {{ .name }}</h5>
-                    {{ partial "city-list.html" . }}
-                  {{ end }}
-                </div>
-              {{ end }}
-            </div>
-          </div>
-        {{ end }}
-      </div>
-    </div>
-  </div>
+								<!-- For the US, include the state level -->
+								{{ if eq .name "United States of America" }}
+									<div class="space-y-8">
+										{{ range sort .states "name" }}
+											<div
+												class="space-y-2"
+												itemscope
+												itemtype="https://schema.org/State"
+											>
+												<h5
+													class="text-3xl"
+													itemprop="name"
+													id="{{ .name | anchorize }}"
+												>
+													{{ .name }}
+												</h5>
+												{{ partial "city-list.html" . }}
+											</div>
+										{{ end }}
+									</div>
+								{{ else }}
+									<!-- For other countries, include cities directly -->
+									<h5 class="sr-only">All of {{ .name }}</h5>
+									{{ partial "city-list.html" . }}
+								{{ end }}
+							</div>
+						{{ end }}
+					</div>
+				</div>
+			{{ end }}
+		</div>
+	</div>
+</div>
 
-  <hr class="my-8" />
+<hr class="my-8" />
 
-  <div class="space-y-4 text-justify text-2xl">
-    <h2 class="text-6xl">About</h2>
+<div class="space-y-4 text-justify text-2xl">
+	<h2 class="text-6xl">About</h2>
 
-    <div itemprop="description" class="space-y-4">
-      <p>
-        This is a directory of spaces where you can listen to high fidelity
-        soundsystems.
-      </p>
+	<div itemprop="description" class="space-y-4">
+		<p>
+			This is a directory of spaces where you can listen to high fidelity
+			soundsystems.
+		</p>
 
-      <p>
-        I built this because I want more of these listening spaces to exist. I
-        hope that this directory raises interest in these spaces, increases
-        demand for them, and ultimately leads to more of them opening.
-      </p>
+		<p>
+			I built this because I want more of these listening spaces to exist. I
+			hope that this directory raises interest in these spaces, increases
+			demand for them, and ultimately leads to more of them opening.
+		</p>
 
-      <p>
-        So far, I've only added places that I've visited or want to visit. If
-        you'd like to contribute, please
-        <a href="mailto:james@jamesbvaughan.com">email me</a>, or send me a PR
-        if you're comfortable with GitHub.
-        <a href="https://github.com/jamesbvaughan/listeningspaces.net"
-          >Here's the repo</a
-        >.
-      </p>
-    </div>
-  </div>
+		<p>
+			So far, I've only added places that I've visited or want to visit. If
+			you'd like to contribute, please
+			<a href="mailto:james@jamesbvaughan.com">email me</a>, or send me a PR
+			if you're comfortable with GitHub.
+			<a href="https://github.com/jamesbvaughan/listeningspaces.net"
+			>Here's the repo</a
+			>.
+		</p>
+	</div>
+</div>
 {{ end }}
 
 {{ define "partials/city-list.html" }}
-  <div class="flex flex-wrap gap-8">
-    {{ range sort .cities "name" }}
-      <div class="space-y-1" itemscope itemtype="https://schema.org/City">
-        <h6
-          class="text-2xl text-nowrap"
-          itemprop="name"
-          id="{{ .name | anchorize }}"
-        >
-          {{ .name }}
-        </h6>
+<div class="flex flex-wrap gap-8">
+	{{ range sort .cities "name" }}
+		<div class="space-y-1" itemscope itemtype="https://schema.org/City">
+			<h6
+				class="text-2xl text-nowrap"
+				itemprop="name"
+				id="{{ .name | anchorize }}"
+			>
+				{{ .name }}
+			</h6>
 
-        <ul class="space-y-1">
-          {{ range sort .spaces "name" }}
-            <li
-              class="space-y-1 text-xl font-light text-nowrap"
-              itemscope
-              itemtype="https://schema.org/BarOrPub"
-            >
-              <a href="/{{ default .name .path | urlize }}/" itemprop="url"
-                ><span itemprop="name">{{ .name }}</span></a
-              >
+			<ul class="space-y-1">
+				{{ range sort .spaces "name" }}
+					<li
+						class="space-y-1 text-xl font-light text-nowrap"
+						itemscope
+						itemtype="https://schema.org/BarOrPub"
+					>
+						<a href="/{{ default .name .path | urlize }}/" itemprop="url"
+						><span itemprop="name">{{ .name }}</span></a
+						>
 
-              <div class="flex items-center space-x-2">
-                {{ if in .tags "cafe" }}
-                  {{ partial "space-tag.html" (dict "icon" "images/icons/coffee.svg" "name" "Cafe") }}
-                {{ end }}
-                {{ if in .tags "bar" }}
-                  {{ partial "space-tag.html" (dict "icon" "images/icons/martini.svg" "name" "Bar") }}
-                {{ end }}
-                {{ if in .tags "restaurant" }}
-                  {{ partial "space-tag.html" (dict "icon" "images/icons/utensils.svg" "name" "Restaurant") }}
-                {{ end }}
-              </div>
-            </li>
-          {{ end }}
-        </ul>
-      </div>
-    {{ end }}
-  </div>
+						<div class="flex items-center space-x-2">
+							{{ if in .tags "cafe" }}
+								{{ partial "space-tag.html" (dict "icon" "images/icons/coffee.svg" "name" "Cafe") }}
+							{{ end }}
+							{{ if in .tags "bar" }}
+								{{ partial "space-tag.html" (dict "icon" "images/icons/martini.svg" "name" "Bar") }}
+							{{ end }}
+							{{ if in .tags "restaurant" }}
+								{{ partial "space-tag.html" (dict "icon" "images/icons/utensils.svg" "name" "Restaurant") }}
+							{{ end }}
+						</div>
+					</li>
+				{{ end }}
+			</ul>
+		</div>
+	{{ end }}
+</div>
 {{ end }}
 
 {{ define "partials/space-tag.html" }}
-  {{ $name := .name }}
-  {{ with resources.Get .icon | fingerprint }}
-    <img
-      src="{{ .RelPermalink }}"
-      alt="{{ $name }}"
-      title="{{ $name }}"
-      class="opacity-70"
-      height="16"
-      width="16"
-    />
-  {{ end }}
+{{ $name := .name }}
+{{ with resources.Get .icon | fingerprint }}
+	<img
+		src="{{ .RelPermalink }}"
+		alt="{{ $name }}"
+		title="{{ $name }}"
+		class="opacity-70"
+		height="16"
+		width="16"
+	/>
+{{ end }}
 {{ end }}

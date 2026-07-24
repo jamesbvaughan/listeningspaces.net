@@ -1,79 +1,79 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ .Description }}" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="{{ .Description }}" />
 
-    <link rel="canonical" href="{{ .Permalink }}" />
+		<link rel="canonical" href="{{ .Permalink }}" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ .Title }}" />
-    <meta property="og:site_name" content="{{ .Site.Title }}" />
-    <meta property="og:description" content="{{ .Description }}" />
-    <meta property="og:url" content="{{ .Permalink }}" />
-    {{ with resources.Get "images/og.png" | fingerprint }}
-      <meta property="og:image" content="{{ .Permalink }}" />
-    {{ end }}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@jamesontheline" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="{{ .Title }}" />
+		<meta property="og:site_name" content="{{ .Site.Title }}" />
+		<meta property="og:description" content="{{ .Description }}" />
+		<meta property="og:url" content="{{ .Permalink }}" />
+		{{ with resources.Get "images/og.png" | fingerprint }}
+			<meta property="og:image" content="{{ .Permalink }}" />
+		{{ end }}
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:creator" content="@jamesontheline" />
 
-    <meta name="theme-color" content="#f9f5ed" />
-    <meta name="color-scheme" content="light" />
+		<meta name="theme-color" content="#f9f5ed" />
+		<meta name="color-scheme" content="light" />
 
-    {{ with resources.Get "images/favicon.png" | fingerprint }}
-      <link rel="icon" href="{{ .Permalink }}" />
-    {{ end }}
+		{{ with resources.Get "images/favicon.png" | fingerprint }}
+			<link rel="icon" href="{{ .Permalink }}" />
+		{{ end }}
 
 
-    <title>{{ .Title }}</title>
+		<title>{{ .Title }}</title>
 
-    {{ with resources.Get "css/styles.css" }}
-      {{ $opts := dict "minify" (not hugo.IsServer) "optimize" (not hugo.IsServer) }}
-      {{ with . | css.TailwindCSS $opts }}
+		{{ with resources.Get "css/styles.css" }}
+			{{ $opts := dict "minify" (not hugo.IsServer) "optimize" (not hugo.IsServer) }}
+			{{ with . | css.TailwindCSS $opts }}
     <style>{{ .Content | safeCSS }}</style>
-      {{ end }}
-    {{ end }}
-  </head>
+			{{ end }}
+		{{ end }}
+	</head>
 
-  <body
-    itemscope
-    itemtype="https://schema.org/WebSite"
-    class="mx-4 mt-4 mb-8 overflow-y-scroll"
-    style="
-    background-color: #f9f5ed;
-    {{ with resources.Get "images/natural-paper.png" }}
-      {{ with images.Filter (images.Process "webp") . }}
-        background-image: url({{ .RelPermalink }});
-      {{ end }}
-    {{ end }}
-    "
-  >
-    <meta itemprop="name" content="{{ .Site.Title }}" />
-    <meta itemprop="url" content="{{ .Site.BaseURL }}" />
+	<body
+		itemscope
+		itemtype="https://schema.org/WebSite"
+		class="mx-4 mt-4 mb-8 overflow-y-scroll"
+		style="
+		background-color: #f9f5ed;
+{{ with resources.Get "images/natural-paper.png" }}
+{{ with images.Filter (images.Process "webp") . }}
+		background-image: url({{ .RelPermalink }});
+{{ end }}
+{{ end }}
+		"
+	>
+		<meta itemprop="name" content="{{ .Site.Title }}" />
+		<meta itemprop="url" content="{{ .Site.BaseURL }}" />
 
-    <div
-      class="container relative my-8 mx-auto max-w-[720px] space-y-8 text-black/70 mix-blend-multiply"
-    >
-      {{ partial "header.html" . }}
+		<div
+			class="relative container mx-auto my-8 max-w-[720px] space-y-8 text-black/70 mix-blend-multiply"
+		>
+			{{ partial "header.html" . }}
 
 
-      <hr class="my-8" />
+			<hr class="my-8" />
 
-      <main>
-        {{ block "main" . }}{{ end }}
-      </main>
+			<main>
+				{{ block "main" . }}{{ end }}
+			</main>
 
-      <hr class="my-8" />
+			<hr class="my-8" />
 
-      {{ partial "footer.html" . }}
-    </div>
+			{{ partial "footer.html" . }}
+		</div>
 
-    <svg hidden>
-      <filter id="paper-ink">
-        <feMorphology operator="dilate" radius="0.5" />
-        <feGaussianBlur stdDeviation="0.1" />
-      </filter>
-    </svg>
-  </body>
+		<svg hidden>
+			<filter id="paper-ink">
+				<feMorphology operator="dilate" radius="0.5" />
+				<feGaussianBlur stdDeviation="0.1" />
+			</filter>
+		</svg>
+	</body>
 </html>

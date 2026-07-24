@@ -9,17 +9,16 @@
   "scripts": {
     "dev": "hugo server --printPathWarnings",
     "build": "hugo --minify --printPathWarnings",
-    "format": "prettier --write .",
+    "format": "oxfmt . && gotmplfmt -w layouts content",
+    "check-format": "oxfmt --check .",
+    "check-templates": "gotmplfmt -l layouts content | (! grep .)",
     "lint-data": "ajv -s data/spaces.schema.json -d data/spaces.yaml -c ajv-formats"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
     "ajv-cli": "^5.0.0",
     "ajv-formats": "^3.0.1",
-    "concurrently": "^9.0.1",
-    "prettier": "^3.3.3",
-    "prettier-plugin-go-template": "^0.0.15",
-    "prettier-plugin-tailwindcss": "^0.6.8",
+    "oxfmt": "^0.60.0",
     "tailwindcss": "^4.3.3"
   }
 }

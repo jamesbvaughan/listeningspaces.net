@@ -1,6 +1,6 @@
 title: Listening Spaces
 baseURL: https://listeningspaces.net
-languageCode: en-us
+locale: en-US
 
 buildDrafts: false
 disableKinds:
