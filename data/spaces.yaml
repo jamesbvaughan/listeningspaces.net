@@ -836,6 +836,36 @@
               tags:
                 - bar
 
+    - name: Philippines
+      cities:
+        - name: Quezon City
+          spaces:
+            - name: 78-53-86
+              image: 78-53-86.jpg
+              instagram: https://www.instagram.com/785386bar/
+              map: https://maps.app.goo.gl/zfxSzE55WhxTq8xAA
+              tags:
+                - bar
+        - name: Makati City
+          spaces:
+            - name: Fat Cat
+              image: fat-cat.jpg
+              instagram: https://www.instagram.com/fat.cat.ph/
+              url: https://fatcatph.com/
+              map: https://maps.app.goo.gl/ApRZ2aG9nT6LFGgu6
+              tags:
+                - bar
+        - name: Caloocan
+          spaces:
+            - name: Sugoi Listening Cafe
+              image: sugoi.jpg
+              instagram: https://www.instagram.com/sugoilisteningcafe/
+              map: https://maps.app.goo.gl/a1rvqruYRmKPs9LK8
+              tags:
+                - bar
+                - cafe
+                - restaurant
+
     - name: Thailand
       cities:
         - name: Bangkok
