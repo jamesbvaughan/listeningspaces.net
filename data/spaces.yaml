@@ -2,6 +2,37 @@
   countries:
     - name: United States of America
       states:
+        - name: Alabama
+          cities:
+            - name: Birmingham
+              spaces:
+                - name: High Dive
+                  url: https://highdive-bham.com/
+                  map: https://maps.app.goo.gl/b9n99jKXmjakGsHfA
+                  instagram: https://www.instagram.com/highdive.bham/
+                  image: high-dive.jpg
+                  tags:
+                    - bar
+                    - cafe
+                    - restaurant
+                  about: |-
+                    From High Dive's website:
+
+                    > We’re Birmingham’s neighborhood lounge and watering hole
+                    that’s built for listening.
+                    >
+                    > With acoustically engineered design and a world-class HiFi
+                    system, we ensure the music is crystal clear, and the
+                    experience is one of a kind. From mellow coffee mornings to
+                    electric nights, we’re spinning vinyl, queuing up the
+                    jukebox, and hosting live sets, all in a space made for top
+                    notch sound quality.
+                    >
+                    > From ABBA and Aretha Franklin to The Beatles, Booker T,
+                    Coltrane, Bob Dylan, and ZZ Top, our curated vinyl
+                    collection is eclectic, with something for everyone. Come
+                    see us and hear the difference.
+
         - name: California
           cities:
             - name: Oakland
